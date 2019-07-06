@@ -1,9 +1,10 @@
 ---
-title: example post
+title: WAKE ME UP INSIDE
 ---
 
 
-###INCOHERENT SCREAMING###
+###INCOHERENT SCREAMING
+CANT WAKE UP
 
 Mauris in lorem nisl. Maecenas tempus facilisis ante, eget viverra nisl
 tincidunt et. Donec turpis lectus, mattis ac malesuada a, accumsan eu libero.
