@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Temporarily store uncommited changes
 #git stash
 
@@ -31,6 +33,7 @@ if [ "$1" != ""]; then
 	git commit -m "$1"
 else
 	git commit -m "publishing"
+fi
 
 # Push
 echo "-----------------Push"
