@@ -29,7 +29,7 @@ yes | cp -a -f _site/. .
 echo "-----------------Committing to master"
 git add -A
 
-if [ "$1" != ""]; then
+if [ "$1" != "" ]; then
 	git commit -m "$1"
 else
 	git commit -m "publishing"
