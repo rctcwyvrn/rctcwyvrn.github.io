@@ -17,7 +17,7 @@ stack exec github-page build
 # Get previous files
 echo "-----------------Fetching and checking out to master"
 git fetch --all
-git checkout -b master --track github_io_repo/master
+git checkout -b master --track origin/master
 
 # Overwrite existing files with new files
 echo "-----------------Writing new files"
@@ -30,7 +30,7 @@ git commit -m $1
 
 # Push
 echo "-----------------Push"
-git push github_io_repo master:master
+git push origin master:master
 
 # Restoration
 echo "-----------------Restoring to original state"
