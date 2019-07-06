@@ -26,7 +26,11 @@ yes | cp -a -f _site/. .
 # Commit
 echo "-----------------Committing to master"
 git add -A
-git commit -m $1
+
+if [ "$1" != ""]; then
+	git commit -m "$1"
+else
+	git commit -m "publishing"
 
 # Push
 echo "-----------------Push"
