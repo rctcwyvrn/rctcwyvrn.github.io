@@ -20,7 +20,7 @@ else
 	git commit -m "dev update"
 fi
 
-git push origin
+git push origin develop
 
 # Get previous files
 echo "-----------------Fetching and checking out to master"
@@ -37,14 +37,16 @@ echo "-----------------Committing to master"
 git add -A
 
 if [ "$1" != "" ]; then
+	git checkout master
 	git commit -m "$1"
 else
+	git checkout master
 	git commit -m "publishing"
 fi
 
 # Push
 echo "-----------------Push"
-git push origin #master:master
+git push origin master #master:master
 
 # Restoration
 echo "-----------------Restoring to original state"
