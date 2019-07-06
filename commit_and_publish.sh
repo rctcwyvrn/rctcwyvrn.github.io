@@ -31,6 +31,7 @@ git checkout -b master --track origin/master
 echo "-----------------Writing new files"
 yes | cp -a -f _site/. .
 
+git checkout master
 # Commit
 echo "-----------------Committing to master"
 git add -A
@@ -43,7 +44,7 @@ fi
 
 # Push
 echo "-----------------Push"
-git push origin master:master
+git push origin #master:master
 
 # Restoration
 echo "-----------------Restoring to original state"
