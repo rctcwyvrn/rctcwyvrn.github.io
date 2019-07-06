@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Temporarily store uncommited changes
-#git stash
+
 
 # Verify correct branch
 git checkout develop
@@ -12,9 +11,16 @@ stack exec github-page clean
 stack exec github-page build
 
 # commit to develop branch, probably uneccessary?
-# echo "-----------------Commiting to develop branch"
-# git add -A
-# git commit -m $1
+echo "-----------------Commiting to develop branch"
+git add -A
+
+if [ "$1" != "" ]; then
+	git commit -m "$1"
+else
+	git commit -m "dev update"
+fi
+
+git push origin
 
 # Get previous files
 echo "-----------------Fetching and checking out to master"
