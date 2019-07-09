@@ -1,4 +1,8 @@
-body{color:black;font-size:16px;margin:0px auto 0px auto;width:600px}div
+body{color:black;
+	font-size:16px;
+	margin:0px auto 0px auto;
+	width:600px;
+	background-color: blue}div
 #header{border-bottom:2px solid black;margin-bottom:30px;padding:12px 0px 12px 0px}div
 #logo a{color:black;float:left;font-size:18px;font-weight:bold;text-decoration:none}div
 #header 
