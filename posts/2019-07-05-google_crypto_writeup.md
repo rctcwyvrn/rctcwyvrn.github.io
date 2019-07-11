@@ -1,9 +1,8 @@
 ---
 title: Google CTF 2019 Crypto challenges writeup
+author: Howard Lin (rctcwyvrn, howard.lin314@gmail.com) Team Maple Bacon, University of British Columbia  
+favorite: yes
 ---
-
-By Howard Lin (rctcwyvrn, howard.lin314@gmail.com)  
-Team Maple Bacon, University of British Columbia  
 
 Quantum Key Distribution
 ---
