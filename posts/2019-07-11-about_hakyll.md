@@ -19,3 +19,13 @@ The index:
 3. Take the default.html and replace the instances of $content$ on the template with index.html
 4. Export that as index.html
 
+The posts and stuff:
+1. Take the post's markdown data
+2. Pull out the metadata, called the 'context'
+3. Apply whatever templates you want to it
+
+Here's how I made the favorite section on the index
+1. Add a favorite tag to the metadata of the post I want to favorite
+2. Make a new template called favorite-list
+3. Use the hakyll DSL syntax to make the template do the same thing as post-list but only if the favorite tag is present
+4. Add to index.html a partial that uses favorite-list
