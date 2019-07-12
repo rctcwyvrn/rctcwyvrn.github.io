@@ -4,25 +4,12 @@ import           Data.Monoid (mappend)
 import           Hakyll
 import qualified Data.Set as S
 import 			 Text.Pandoc.Options
-import			 Skylighting
 --------------------------------------------------------------------------------
-syntaxHighlightingStyle :: Style
-syntaxHighlightingStyle = haddock
-
-generateSyntaxStyle :: IO ()
-generateSyntaxStyle = do
-	let css = styleToCss syntaxHighlightingStyle
-	writeFile "css/syntax.css" css
-	return ()
-
-
 pandocCustomCompiler =
     let mathExtensions = [Ext_tex_math_dollars, Ext_tex_math_double_backslash,
                           Ext_latex_macros]
-        codeExtensions = [Ext_fenced_code_blocks, Ext_backtick_code_blocks, Ext_fenced_code_attributes]
-
         defaultExtensions = writerExtensions defaultHakyllWriterOptions
-        newExtensions = foldr S.insert defaultExtensions (mathExtensions <> codeExtensions <> githubMarkdownExtensions)
+        newExtensions = foldr S.insert defaultExtensions (mathExtensions <> githubMarkdownExtensions)
         writerOptions = defaultHakyllWriterOptions {
                           writerExtensions = newExtensions,
                           writerHTMLMathMethod = MathJax "",
@@ -31,11 +18,7 @@ pandocCustomCompiler =
     in pandocCompilerWith defaultHakyllReaderOptions writerOptions
 
 main :: IO ()
-main = do
-
-	generateSyntaxStyle
-
-	hakyll $ do
+main = hakyll $ do
 	    match "images/*" $ do
 	        route   idRoute
 	        compile copyFileCompiler
