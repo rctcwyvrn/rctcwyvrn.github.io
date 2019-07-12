@@ -2,9 +2,19 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
-
+import qualified Data.Set as S
+import 			 Text.Pandoc.Options
 
 --------------------------------------------------------------------------------
+pandocCustomCompiler = 
+	let defaultExtensions = writerExtensionsdefaultHakyllWriterOptions
+		newExtensions = S.union githubMarkdownExtensions defaultExtensions
+		writerOptions = defaultHakyllOptions{
+							writerExtensions = newExtensions,
+							writerHTMLMathMethod = MathJax ""
+						}
+	in pandocCompilerWith defaultHakyllReaderOptions writerOptions
+
 main :: IO ()
 main = hakyll $ do
 
@@ -18,13 +28,13 @@ main = hakyll $ do
         
     match (fromList ["about.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ pandocCustomCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ pandocCustomCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls

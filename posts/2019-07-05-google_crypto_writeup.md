@@ -1,7 +1,8 @@
 ---
 title: Google CTF 2019 Crypto challenges writeup
-author: Howard Lin (rctcwyvrn, howard.lin314@gmail.com) Team Maple Bacon, University of British Columbia  
+author: Howard Lin (rctcwyvrn)
 favorite: yes
+ctf_tag: yes
 ---
 
 Quantum Key Distribution
@@ -10,13 +11,13 @@ Two of the three crypto challenges this CTF were kinda different from the standa
 
 So let's get into it.  [https://en.wikipedia.org/wiki/BB84](https://en.wikipedia.org/wiki/BB84)
 
-BB84 has the following steps:
-1. Alice generates random 512 bit numbers a and b
-2. Alice sends the qubits, with the ith qubit  being the encoding of the ith bit of a under the basis determined by the ith bit of b
-3. Bob recieves said qubits and measures each qubit under a random basis
-4. Alice and Bob exchange the list of bases that they used
-5. They discard any bits where they used different bases and take the remaining bits as the shared key
-6. They can then do some other thing to account for possible mistakes/disruptions but that doesn't apply here
+BB84 has the following steps:  
+1. Alice generates random 512 bit numbers a and b  
+2. Alice sends the qubits, with the ith qubit  being the encoding of the ith bit of a under the basis determined by the ith bit of b  
+3. Bob recieves said qubits and measures each qubit under a random basis  
+4. Alice and Bob exchange the list of bases that they used  
+5. They discard any bits where they used different bases and take the remaining bits as the shared key  
+6. They can then do some other thing to account for possible mistakes/disruptions but that doesn't apply here  
 
 Now lets compare that to the instructions given by the challenge, we see that the steps are kinda out of order. We send Bob (the satellite) the basis and the qubits at the same time and it responds with it's basis and an "announcement". If we computute the shared secret then we see that it's not the same as the announcement but does have the same bit length. 
 
@@ -34,7 +35,7 @@ Reversing Cellular Automata
 ---
 The second of the two weird systems. This one is very straightforward though, "just" reverse a step in the cellular automata.
 
-http://mathworld.wolfram.com/Rule126.html Here is the rule in question.
+[Here is the rule in question.](http://mathworld.wolfram.com/Rule126.html)
 
 It generates the nth bit by looking at the left (n-1), center (n), and right (n+1) bits. And rule 126 was chosen because of how it generates that bit. If LCR are all 0's or all 1's then the nth bit is 0, otherwise it's 1.
 
@@ -84,10 +85,10 @@ Reality
 A more classic kind of CTF crypto problem, just a confusing hint and a port to netcat to.
 Let's break down the information we have.
 
-Connecting to the port gives us:
-1. An encrypted flag
-2. Three "coefficients" that are pairs of real numbers with 500 decimal places of precision, the first is small and the second is around 10^40^
-3. A message: "You need 5 coefficients to decrypt the flag, here's 3"
+Connecting to the port gives us:  
+1. An encrypted flag  
+2. Three "coefficients" that are pairs of real numbers with 500 decimal places of precision, the first is small and the second is around 10^40^  
+3. A message: "You need 5 coefficients to decrypt the flag, here's 3"  
 
 Huh, weird. Let's look closely at the challenge, the name is "reality" and the description mentions someone called "Shamir".
 Who is Shamir? This of course refers to [Adi Shamir](https://en.wikipedia.org/wiki/Adi_Shamir) one of the creators of RSA (He's the S in RSA). But we have a bunch of real numbers, while RSA uses exclusively integer rings. Hm, let's keep looking.
