@@ -10,6 +10,7 @@ pandocCustomCompiler =
                           Ext_latex_macros]
         defaultExtensions = writerExtensions defaultHakyllWriterOptions
         newExtensions = foldr S.insert defaultExtensions (mathExtensions <> githubMarkdownExtensions)
+        --newExtensions = foldr S.insert defaultExtensions (mathExtensions)
         writerOptions = defaultHakyllWriterOptions {
                           writerExtensions = newExtensions,
                           writerHTMLMathMethod = MathJax "",
