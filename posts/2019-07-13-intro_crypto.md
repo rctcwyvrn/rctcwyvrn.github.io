@@ -53,39 +53,7 @@ If you're having trouble imagining how this could possibly happen, imagine the s
 
 
 
-**Solution**: Message authentication codes and cryptographic hashing functions
-
-
-
-Message authentication codes
-----
-
-The goal is to attach something to each message that an attacker cannot replicate, so you know to not accept any messages that does not have the correct tag. The tag needs to do two things, it needs to be unique for each message and contain information that only your partner would know (some predetermined secret). The tag also needs to be made in such a way so that an attacker can't stop a message and pull out the secret from it.
-
-
-
-_Method 1_: Use a cipher. The basic idea is that you can just lock the message and send both the message and it's locked version. When your partner receives it they can just unlock and see if it matches the other message. (It's a bit more complicated than that though)
-
-
-
-_Method 2_: Use a cryptographic hash function.
-
-Hashing functions
-----
-
-Cryptographic hash functions are functions that take any message of any length and convert it to a fixed length, say 16 bytes, of data. They also have the unique property that if the original message is even slightly different, the result will be completely different. This means that the only way to get the original message from the resulting 16 bytes is to test all possible messages until you get one that hashes to the desired result. 
-
-
-
-Now to make a MAC from this you can mix the message with the secret and then hash it. Then when your partner receives it they can mix the message with the secret in the same way and check that the hash is correct. If an attacker wants to change the message or pretend to be you, then they need to have the secret.
-
-
-
-**Problem**: MAC still needs an initial password though. How else can we send a message and know that the sender is authentic?
-
-
-
-**Solution**: Remember how I mentioned there were two ways of doing encryption? The solution to this problem is the other form of encryption, public key based encryption.
+**Solution**:Remember how I mentioned there were two ways of doing encryption? The solution to this problem is the other form of encryption, public key based encryption.
 
 
 
@@ -111,18 +79,52 @@ This procedure is called "signing".
 
 
 
-The magical keys come from the magical land of mathematics, and range from points on curves to matrices to prime numbers. The most famous of them all is RSA. I am hesitant to even mention RSA because despite its fame and success during it's time, (it is now extremely dangerous)[https://blog.trailofbits.com/2019/07/08/fuck-rsa/]
+The magical keys come from the magical land of mathematics, and range from points on curves to matrices to prime numbers. The most famous of them all is RSA. I am hesitant to even mention RSA because despite its fame and success during it's time, [it is now extremely dangerous](https://blog.trailofbits.com/2019/07/08/fuck-rsa/). The one you should use is Elliptical Curve Cryptography.
+
+So everything should be fine now right?
+
+**Problem**: This one is kinda complicated. The obvious problem is that most public key encryption is slow. The other problem is that RSA keys are not ephemeral, ie randomly generated. Rather public/private keys are stored for potentially months at a time. This means that if someone steals your private key, they can use it for a long time to lots of bad things.
+
+**Solution**: Use public key encryption to initially get a randomly generated shared secret secured between the parties, and then use MACs to guarentee sender identity and message integrity afterwards.
+
+
+Message authentication codes (MACs)
+----
+
+The goal is to attach something to each message that an attacker cannot replicate, so you know to not accept any messages that does not have the correct tag. The tag needs to do two things, it needs to be unique for each message and contain information that only your partner would know (some predetermined secret). The tag also needs to be made in such a way so that an attacker can't stop a message and pull out the secret from it.
 
 
 
-_Note_: MAC's are still very important for authenticating messages after you've established a shared secret because of a big flaw with public key crpyto, it's slow and also breaks spectacularly when keys are stolen. What I mean is that for example with key-exchanges you can make your "secret" to just be a random number, so the shared secret is new every time. With public-key if your private key is stolen then _all_ of your past messages are now free to be stolen.
+_Method 1_: Use a cipher. The basic idea is that you can just lock the message and send both the message and it's locked version. When your partner receives it they can just unlock and see if it matches the other message. (It's a bit more complicated than that though)
 
 
 
-That should be the basic rundown for the core concepts of cryptography.
+_Method 2_: Use a cryptographic hash function.
+
+Hashing functions
+----
+
+Cryptographic hash functions are functions that take any message of any length and convert it to a fixed length, say 16 bytes, of data. They also have the unique property that if the original message is even slightly different, the result will be completely different. This means that the only way to get the original message from the resulting 16 bytes is to test all possible messages until you get one that hashes to the desired result. 
 
 
 
+Now to make a MAC from this you can mix the message with the secret and then hash it. Then when your partner receives it they can mix the message with the secret in the same way and check that the hash is correct. If an attacker wants to change the message or pretend to be you, then they need to have the secret.
+
+
+
+
+That should be the basic rundown for the core concepts of cryptography. Here is everything we talked about summed up in the standard way connections are secured over the internet, TLS.
+
+A client wants to talk to a server securely
+1. The client generates a random number, and the public value mixed with that random number (Diffie-Hellman key exchange)
+2. The client encrypts this with the server's public key (So the client knows only the server could decrypt it)
+3. The server does the same steps for the key exchange
+4. Both parties calculate a shared secret, which was just randomly generated
+5. Both parties then use that key to encrypt everything they send between each other (AES encryption)
+6. They also include a MAC that guarentees the message's integrity and the sender's identity (HMAC)
+
+
+Important thing not mentioned: Certificates and certificate authorities, look them up if you're curious, it's basically a third party that vouches for the server.
 
 
 **To look further**:
