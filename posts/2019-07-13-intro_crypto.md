@@ -79,7 +79,7 @@ This procedure is called "signing".
 
 
 
-The magical keys come from the magical land of mathematics, and range from points on curves to matrices to prime numbers. The most famous of them all is RSA. I am hesitant to even mention RSA because despite its fame and success during it's time, [it is now extremely dangerous](https://blog.trailofbits.com/2019/07/08/fuck-rsa/). The one you should use is Elliptical Curve Cryptography.
+The magical keys come from the magical land of mathematics, and range from points on curves to matrices to prime numbers. The most famous of them all is RSA. I am hesitant to even mention RSA because despite its fame and success during it's time, [it is now extremely dangerous to actually implement](https://blog.trailofbits.com/2019/07/08/fuck-rsa/). The one you should use is Elliptical Curve Cryptography.
 
 So everything should be fine now right?
 
@@ -131,4 +131,4 @@ Important thing not mentioned: Certificates and certificate authorities, look th
 
 - Wikipedia
 - Computerphile videos detailing Diffie-hellman key exchanges and man in the middle attacks
-- https://cryptopals.com/ for a whirlwind tour of how to break cryptography. Note: side effects include a sense of dread when realizing most security code is written poorly and even small mistakes lead to broken systems.
+- [cryptopals](https://cryptopals.com/) for a whirlwind tour of how to break cryptography. Note: side effects include a sense of dread when realizing most security code is written poorly and even small mistakes lead to broken systems.

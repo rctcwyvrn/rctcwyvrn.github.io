@@ -24,7 +24,7 @@ The posts and stuff:
 
 1. Take the post's markdown data  
 2. Pull out the metadata, called the 'context'  
-3. Apply whatever templates you want to it  
+3. Apply whatever templates you want to it, using the metadata if you want  
 
 Here's how I made the favorite section on the index: 
   
@@ -37,5 +37,15 @@ Using pandocCompilerWith to make stuff like laTeX
 
 \\[ \\ln x = \\int_{-\\infty}^x \\frac 1 y \\, dy . \\]
 
-I followed this: http://travis.athougies.net/posts/2013-08-13-using-math-on-your-hakyll-blog.html
-The idea is that you just need to set the proper extensions and options for pandoc's writing
+I followed this: [http://travis.athougies.net/posts/2013-08-13-using-math-on-your-hakyll-blog.html](http://travis.athougies.net/posts/2013-08-13-using-math-on-your-hakyll-blog.html)
+The idea is that you just need to set the proper extensions and options for pandoc's writing. 
+
+**Note**
+You need to make sure the math.jax script is https or else github pages (smartly) refuses to load it
+
+How to add a block of text to every post of a certain type:
+
+1. Generate the html file for the stuff you want to add, for me this was abit.html, which is an about paragraph
+2. Add a tag to the metadata for your post's markdown
+3. Edit the post.html template to check for the tag
+4. Make the template load that html file as a partial if the tag is present
