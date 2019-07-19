@@ -116,10 +116,11 @@ Now to make a MAC from this you can mix the message with the secret and then has
 That should be the basic rundown for the core concepts of cryptography. Here is everything we talked about summed up in the standard way connections are secured over the internet, TLS.
 
 A client wants to talk to a server securely
+
 1. The client generates a random number, and the public value mixed with that random number (Diffie-Hellman key exchange)
 2. The client encrypts this with the server's public key (So the client knows only the server could decrypt it)
 3. The server does the same steps for the key exchange
-4. Both parties calculate a shared secret, which was just randomly generated
+4. Both parties calculate a shared secret, which was just randomly generated (Ephemeral keys)
 5. Both parties then use that key to encrypt everything they send between each other (AES encryption)
 6. They also include a MAC that guarentees the message's integrity and the sender's identity (HMAC)
 
