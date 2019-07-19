@@ -1,7 +1,4 @@
 ---
-test1_tag: yes
-test2_tag: yes
-test3_tag: yes
 title: How does Hakyll work?
 author: rctcwyvrn
 ---

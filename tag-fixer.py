@@ -1,6 +1,6 @@
 import glob
 
-for filename in glob.glob('*.md'):
+for filename in glob.glob('posts/*.md'):
 	file = open(filename)
 	lines = file.readlines()
 	print("checking file=",filename)
