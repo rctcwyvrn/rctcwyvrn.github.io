@@ -6,7 +6,7 @@
 git checkout develop
 
 #Run tag fixer
-python tag_fixer.py
+python tag-fixer.py
 
 # Build new files
 echo "-----------------Building new files"
