@@ -12,7 +12,8 @@ for filename in glob.glob('posts/*.md'):
 				new_file+=(tag + "_tag: yes\n")
 		for line in lines[2:]:
 			new_file+=line
-		print(new_file)
+		#print(new_file)
+		print("Writing new tags for file=",filename)
 
 		x = open(filename, 'w')
 		x.write(new_file)
