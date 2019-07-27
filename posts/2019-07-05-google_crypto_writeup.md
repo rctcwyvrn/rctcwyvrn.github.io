@@ -108,34 +108,60 @@ Given a matrix A and a vector v, what vector x, with the constraint that x is ma
 
 We want our closest vector problem to solve for the integer coefficients that make up the polynomial. Here's our equations, we know that it's in this form because the challenge said we needed 5 coefficients to decode the flag.
 
-y1 = c0 + c1 * x1 + c2 * x1^2^ + c3 * x1^3^ + c4 * x1^4^   
-y2 = c0 + c1 * x2 + c2 * x2^2^ + c3 * x2^3^ + c4 * x2^4^   
-y3 = c0 + c1 * x3 + c2 * x3^2^ + c3 * x3^3^ + c4 * x3^4^   
+\\begin{equation}
+y_1 = c_0 + c_1  x_1 + c_2  x_1^2 + c_3  x_1^3 + c_4  x_1^4   \\\\
+y_2 = c_0 + c_1  x_2 + c_2  x_2^2 + c_3  x_2^3 + c_4  x_2^4  \\\\ 
+y_3 = c_0 + c_1  x_3 + c_2  x_3^2 + c_3  x_3^3 + c_4  x_3^4  \\\\ 
+\\end{equation}
 
-Now into a matrix, A=  
-|1 , x1 , x1^2^ , x1^3^ , x1^4^ |   
-|1 , x2 , x2^2^ , x2^3^ , x2^4^ |    
-|1 , x3 , x3^2^ , x3^3^ , x3^4^ |   
-|1 , 0 , 0 , 0 , 0 |  
 
-The goal vector, v=  
-|y1|  
-|y2|  
-|y3|  
-|c0|  
+Now into a matrix, 
 
-So given this we expect that the CVP will find x=  
-|c0|  
-|c1|  
-|c2|  
-|c3|  
-|c4|  
+\\begin{equation}
+A=  
+\\begin{bmatrix}
+1 & x_1 & x_1^2 & x_1^3 & x_1^4 \\\\    
+1 & x_2 & x_2^2 & x_2^3 & x_2^4 \\\\
+1 & x_3 & x_3^2 & x_3^3 & x_3^4 \\\\
+1 & 0 & 0 & 0 & 0 \\\\
+\\end{bmatrix}
+\\end{equation}
+
+The goal vector, 
+
+\\begin{equation}
+v=  
+\\begin{bmatrix}
+y_1 \\\\  
+y_2 \\\\
+y_3 \\\\
+c_0 \\\\
+\\end{bmatrix}
+\\end{equation}
+
+Remember CVP finds integer valued x such that $Ax=v$. So given this we expect that the CVP will find 
+\\begin{equation}
+x=  
+\\begin{bmatrix}
+c_0 \\\\  
+c_1 \\\\
+c_2 \\\\
+c_3 \\\\
+c_4 \\\\
+\\end{bmatrix}
+\\end{equation}
 
 and return us a vector that is close to (and hopefully close enough so that c0 will be valid)  
-|y1|  
-|y2|  
-|y3|  
-|c0| which we can extract the secret, c0, out from.  
+\\begin{equation}
+res=  
+\\begin{bmatrix}
+y_1 \\\\  
+y_2 \\\\
+y_3 \\\\
+c_0 \\\\
+\\end{bmatrix}
+\\end{equation}
+which we can extract the secret, c0, out from.  
 
 The problem is that we don't know what c0 is, so we can't give use the goal vector as written.
 The solution I ended up using was to guess and make it insignificant, ie multiply everything in the matrix and the y's by a large scaling factor so that the algorithm "doesn't care as much" about the difference between our guessed c0 and what we want it to return, the actual c0.
