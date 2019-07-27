@@ -1,6 +1,6 @@
 ---
 title: Google CTF 2019 Crypto challenges writeup
-author: Howard Lin (rctcwyvrn)
+author: rctcwyvrn
 favorite: yes
 ctf_tag: yes
 ---
