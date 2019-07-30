@@ -49,3 +49,11 @@ How to add a block of text to every post of a certain type:
 2. Add a tag to the metadata for your post's markdown
 3. Edit the post.html template to check for the tag
 4. Make the template load that html file as a partial if the tag is present
+
+
+```haskell
+main :: IO ()
+main = hakyll $ do
+	    match "images/*" $ do
+	        route   idRoute
+```

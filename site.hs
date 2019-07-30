@@ -2,24 +2,31 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
+import           Text.Pandoc.Options
+import           Text.Pandoc.Highlighting
 import qualified Data.Set as S
-import 			 Text.Pandoc.Options
 --------------------------------------------------------------------------------
+syntaxStyle = kate
+
 pandocCustomCompiler =
-    let mathExtensions = [Ext_tex_math_dollars, Ext_tex_math_double_backslash,
+    let mathExtensions = extensionsFromList [Ext_tex_math_dollars, Ext_tex_math_double_backslash,
                           Ext_latex_macros]
         defaultExtensions = writerExtensions defaultHakyllWriterOptions
-        newExtensions = foldr S.insert defaultExtensions (mathExtensions <> githubMarkdownExtensions)
-        --newExtensions = foldr S.insert defaultExtensions (mathExtensions)
+        newExtensions = mathExtensions <> defaultExtensions <> githubMarkdownExtensions
         writerOptions = defaultHakyllWriterOptions {
                           writerExtensions = newExtensions,
-                          writerHTMLMathMethod = MathJax "",
-                          writerHighlightStyle = Just syntaxHighlightingStyle
+                          writerHTMLMathMethod = MathJax "",--,
+                          writerHighlightStyle = Just syntaxStyle
                         }
     in pandocCompilerWith defaultHakyllReaderOptions writerOptions
 
 main :: IO ()
-main = hakyll $ do
+main = do
+
+    generateCSS
+
+    hakyll $ do
+
 	    match "images/*" $ do
 	        route   idRoute
 	        compile copyFileCompiler
@@ -28,7 +35,7 @@ main = hakyll $ do
 	        route   idRoute
 	        compile compressCssCompiler
 	        
-	    match (fromList ["about.md", "contact.markdown"]) $ do
+	    match (fromList ["about.markdown", "contact.markdown"]) $ do
 	        route   $ setExtension "html"
 	        compile $ pandocCustomCompiler
 	            >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -78,3 +85,8 @@ postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
 
+generateCSS :: IO ()
+generateCSS = do
+	let css = styleToCss syntaxStyle
+	writeFile "css/syntax.css" css
+	return ()
