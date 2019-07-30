@@ -8,10 +8,12 @@ git checkout develop
 #Run tag fixer
 python tag-fixer.py
 
+#Recompile site.hs
+stack build
+
 # Build new files
 echo "-----------------Building new files"
-stack exec github-page clean
-stack exec github-page build
+stack exec github-page rebuild
 
 # commit to develop branch, probably uneccessary?
 echo "-----------------Commiting to develop branch"
