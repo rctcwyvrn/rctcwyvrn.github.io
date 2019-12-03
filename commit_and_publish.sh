@@ -37,6 +37,7 @@ echo "-----------------Writing new files"
 yes | cp -a -f _site/. .
 
 git checkout master
+
 # Commit
 echo "-----------------Committing to master"
 git add -A
@@ -57,5 +58,3 @@ git push origin master #master:master
 echo "-----------------Restoring to original state"
 git checkout develop
 git branch -D master
-
-#git stash pop
