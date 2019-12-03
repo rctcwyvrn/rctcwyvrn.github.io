@@ -2,7 +2,6 @@
 title: BSides Ottawa crypto challenges writeup
 author: rctcwyvrn
 favorite: yes
-ctf_tag: yes
 ---
 Code can be found [here](https://github.com/rctcwyvrn/ctf_stuff/tree/master/bsides)
 
@@ -18,7 +17,8 @@ Anyway, on with the writeups
 
 
 
-## Squared away
+Squared away
+---
 
 ### Flag 1 (150 points)
 
@@ -124,7 +124,8 @@ Sorry, no flag because I forgot to save it... I figured out the last half of the
 
 
 
-## Meme generator (200 points)
+Meme generator (200 points)
+---
 
 **Credits for the solve to Xander** (I really hope I didn't remember/spell your name wrong...)
 
@@ -190,17 +191,18 @@ So we expect to only generate 2 * 2^24 hashes, and since creating a hash is a lo
 
 
 
-## Old school (400 points and a prize for first solve)
+Old school (400 points and a prize for first solve)
+---
 
 *The one that most people reading this writeup are actually interested in.* 
 
 Some context, this challenge was the only challenge worth this amount, I think the next highest was 300? Even so there weren't very many above or at 200 at all, most challenges were in the 50-150 point range. And to top it off, the first solver would be awarded a mysterious prize, which ended up being a [Hak5 WiFi Pineapple nano](https://shop.hak5.org/products/wifi-pineapple)!
 
-Now I'm telling you this because I want to show off how cool I am for being the first solve and being only one of two teams that ended up solving this challenge, but really me winning the prize was me getting lucky. They actually doubled the point value and announced the prize on the morning of the second day, and lucky me decided to work on this challenge for most of the first day and had gotten the flag right after the event had stopped on the first day. So I got to walk in on the second day and collect my 400 points and my prize!
+Now I'm telling you this because I want to show off how cool I am for being the first solve and being only one of two teams that ended up solving this challenge, but really me winning the prize was me getting lucky. They actually doubled the point value and announced the prize on the morning of the second day, and lucky me decided to work on this challenge for most of the first day and had gotten the flag right after the event had stopped on the first day, so I got to walk in on the second day and collect my 400 points and my prize!
 
 
 
-The challenge itself was actually relatively straightforward in terms of what we had do. We're given a decryption oracle that runs NDS, New Data Seal. Our job is to decrypt the given ciphertext. Like **Squared Away 1** , the oracle does check if we try to submit a block that matches the ciphertext but this time we can't do any blinding tricks.
+The challenge itself was actually pretty clear in terms of what we had break and how. We're given a decryption oracle that runs NDS, New Data Seal. Our job is to decrypt the given ciphertext. Like **Squared Away 1** , the oracle does check if we try to submit a block that matches the ciphertext but this time we can't do any blinding tricks.
 
 
 
@@ -259,7 +261,7 @@ NDS's round function F:
 3. Uses that byte of the key in some complex permutations and stuff that you don't need to worry about
 
 
-
+  
 **How do we use the slide attack property to recover the secret key?**
 
 The idea is that we can guess what a byte of the secret key is, and know if we were right or not by looking at what the decryption returns.
