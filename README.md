@@ -5,4 +5,4 @@ My blog uses hakyll. Hakyll is a haskell based static html generator which allow
 Don't look too carefully at the branches or how I deploy this website...  
 It's not pretty... but it's what they had on the hakyll tutorial page :woman_shrugging:
 
-css stolen from [team ctf website](https://ubcctf.github.io/) [github](https://github.com/ubcctf/ubcctf.github.io)
+css stolen from [team ctf website](https://ubcctf.github.io/). Source [here](https://github.com/ubcctf/ubcctf.github.io)
