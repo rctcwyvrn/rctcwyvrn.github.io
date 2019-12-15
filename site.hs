@@ -6,7 +6,7 @@ import           Text.Pandoc.Options
 import           Text.Pandoc.Highlighting
 import qualified Data.Set as S
 --------------------------------------------------------------------------------
-syntaxStyle = kate
+syntaxStyle = zenburn
 
 pandocCustomCompiler =
     let mathExtensions = extensionsFromList [Ext_tex_math_dollars, Ext_tex_math_double_backslash,

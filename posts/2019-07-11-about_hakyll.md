@@ -16,7 +16,7 @@ Here's how hakyll generates each page of the website (I think, I'm still figurin
 The index:  
 
 1. Apply the proper templates to make index.html have the list of posts  
-2. Take that index.html and make it $content$  
+2. Take that index.html and make it $content$  (lmao I just noticed that it becomes inline LaTeX, $x+y=1$)
 3. Take the default.html and replace the instances of $content$ on the template with index.html  
 4. Export that as index.html  
 
