@@ -19,12 +19,12 @@ The tag is a bit more complex, it's generated using the ciphertext and the encry
 
 Consider a ciphertext C 10 bytes long.  
 1. Calculate the length v = bitlen(last block of C, split into 8 byte blocks), so in our case the last block is 2 bytes so the bitlen is 16  
-2. Calculate the following polynomial under GF(128), the Galois field with 128 elements. I'll explain in a bit more detail what that means later.   
+2. Calculate the following polynomial under GF(2^128), the Galois field with 128 elements. I'll explain in a bit more detail what that means later.   
 \\[ f(x) = C_1x^3 + C_2x^2 + vx + E_k(nonce)\\]
 Where C_1 and C_2 are the two ciphertext blocks, with C_2 padded to 8 bytes and E_k represents encryption using the cipher and key  
 3. The tag T is then just f(H), where H is the encryption key and H = E_k(A string of 128 0's)
 
-So how does one evaluate things in GF(128)? I have no fucking clue. Just kidding I know a little bit.
+So how does one evaluate things in GF(2^128)? I have no fucking clue. Just kidding I know a little bit.
 
 ## Galois fields
 A Galois field or finite field is just that, a field (a set with addition and multiplication operators) with a finite number of elements. I honestly don't have the math chops to really give a good explanation, but what I do understand is that addition under this field is XOR, which will be important for the attack. Google a 3b1b video or smth. I might update this after I take my algerbra course next year.
