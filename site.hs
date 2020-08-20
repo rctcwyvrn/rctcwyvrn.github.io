@@ -31,8 +31,7 @@ main = do
 
         match "css/*" $ do
             route   idRoute
-            -- compile compressCssCompiler
-            compile copyFileCompiler
+            compile compressCssCompiler
             
         match (fromList ["info/about.md", "info/contact.md"]) $ do
             route   $ setExtension "html"
