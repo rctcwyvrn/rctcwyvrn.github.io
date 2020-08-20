@@ -13,7 +13,7 @@ stack build
 
 # Build new files
 echo "-----------------Building new files"
-stack exec github-page rebuild
+cabal new-run site build
 
 # commit to develop branch, probably uneccessary?
 echo "-----------------Commiting to develop branch"
