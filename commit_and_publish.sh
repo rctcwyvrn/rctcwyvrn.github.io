@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#Run tag fixer
-python tag-fixer.py
-
 # Build new files
 echo "-----------------Building new files"
 cabal new-run site clean

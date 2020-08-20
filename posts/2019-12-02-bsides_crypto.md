@@ -2,6 +2,7 @@
 title: BSides Ottawa crypto challenges writeup
 author: rctcwyvrn
 favorite: yes
+ctf_tag: yes
 blurb: Writeups for some more crypto challenges, featuring a very classic symmetric crypto attack, the slide attack
 ---
 Code can be found [here](https://github.com/rctcwyvrn/ctf_stuff/tree/master/bsides)
