@@ -1,6 +1,7 @@
 ---
 title: How does Hakyll work?
 author: rctcwyvrn
+blurb: A few messy notes on how hakyll works underneath the hood
 ---
 
 How does Hakyll work? A quick rundown from someone completely new to both web design _and_ haskell.

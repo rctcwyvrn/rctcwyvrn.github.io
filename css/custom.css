@@ -4,7 +4,7 @@ body {
  font-family:"Overpass Mono",
  monospace;
 /* color:#df9fdf; */
- color:white;
+ color: white;
  margin:10px auto 10px auto;
  width:800px;
 }
@@ -117,7 +117,15 @@ a {
 }
 a:hover {
  color:#ff99ff;
- text-decoration-style:wavy
+ text-decoration-style:none
+}
+
+p {
+    color: #cfcfcf
+}
+#blurb {
+    color: #B2ADAD;
+    margin-left:5em
 }
 
 div#logo a {

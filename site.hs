@@ -31,7 +31,8 @@ main = do
 
         match "css/*" $ do
             route   idRoute
-            compile compressCssCompiler
+            -- compile compressCssCompiler
+            compile copyFileCompiler
             
         match (fromList ["info/about.md", "info/contact.md"]) $ do
             route   $ setExtension "html"
@@ -64,9 +65,11 @@ main = do
         match "index.html" $ do
             route idRoute
             compile $ do
-                posts <- recentFirst =<< loadAll "posts/*"
+                all_posts <- recentFirst =<< loadAll "posts/*"
+                limited_posts <- limitPosts =<< return all_posts
                 let indexCtx =
-                        listField "posts" postCtx (return posts) `mappend`
+                        listField "all_posts" postCtx (return all_posts) `mappend`
+                        listField "posts" postCtx (return limited_posts) `mappend`
                         constField "title" "Home"                `mappend`
                         defaultContext
 
@@ -82,6 +85,10 @@ postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+-- I don't want to have every single post on my homepage, so just take the most recent 5
+limitPosts :: (MonadMetadata m, MonadFail m) => [Item a] -> m [Item a]
+limitPosts xs = (return $ take 5 xs)
 
 generateCSS :: IO ()
 generateCSS = do

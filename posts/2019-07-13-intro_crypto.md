@@ -2,6 +2,7 @@
 title: A brief introduction to modern cryptography
 author: rctcwyvrn
 abit_tag: yes
+blurb: A lightning tour of the various primitives and tools in modern cryptography and why they exist
 ---
 
 Cryptography has always been about one goal: Making a system for communicating between two parties securely. As the internet has grown and hackers have gotten smarter, the systems to keep secrets have gotten more and more complex to combat them.

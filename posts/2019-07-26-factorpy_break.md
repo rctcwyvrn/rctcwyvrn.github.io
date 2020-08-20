@@ -1,6 +1,7 @@
 ---
 title: factorpy, taking a break for now
 author: rctcwyvrn
+blurb: Otherwise known as "Lily realizes that attempting to write an interpreter without any knowledge of how to write interpreters means you end up writing yourself into a dead end"
 ---
 
 ### Taking a break

@@ -3,6 +3,7 @@ title: UTCTF Galois. Remember kids, never repeat a nonce!
 author: rctcwyvrn
 favorite: yes
 ctf_tag: yes
+blurb: A writeup for a nonce reptition attack on GCM mode
 ---
 Code can be found [here](https://github.com/rctcwyvrn/ctf_stuff/tree/master/utctf/galois)
 
