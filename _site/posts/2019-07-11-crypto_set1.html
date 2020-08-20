@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>rctcwyvrn's blog - Cryptopals Set 1 writeup</title>
+        <link rel="stylesheet" type="text/css" href="../css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="../css/syntax.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                <a href="../">
+                <img src="../images/logo.gif" width="34" height="24" align="top">
+                rctcwyvrn's blog</a>
+            </div>
+            <div id="navigation">
+                <a href="../">Home</a>
+                <a href="https://github.com/rctcwyvrn">Github</a>
+                <a href="../info/about.html">About</a>
+                <a href="../info/contact.html">Contact</a>
+                <a href="../archive.html">Archive</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>Cryptopals Set 1 writeup</h1>
+
+            <div class="info">
+   <p> Posted on July 11, 2019
+    
+        by rctcwyvrn
+    
+</p>
+    <p>
+    
+</p>
+</div>
+
+
+<p>Code can be found <a href="https://github.com/rctcwyvrn/ctf_stuff/blob/master/cryptopals/set_1.py">here</a></p>
+<p>Hi, a simple writeup for the cryptopals set 1 challenges for the crypto noob from a crypto noob. There are plenty of other tutorials, so look for a better one if this one makes no sense</p>
+<p>This is gonna mostly be a tutorial for how to do this byte stuff in python, which is really unintuitive to me anyway</p>
+<p><em>NOTE: Some of the most trouble I had in these challenges was getting the data to the right types, and it involved lots and lots of stackoverflow and following other guides, remember there’s no shame in doing that and don’t feel bad when you see your 10th TypeError in a row</em></p>
+<h2 id="challenge-1-convert-hex-to-base64">Challenge 1: Convert hex to base64</h2>
+<p>For this challenge you just need to know how to do this stuff in python, I used the codecs library</p>
+<p>Decode: Some encoded format like hex or base64 or ascii –&gt; bytearray Encode: bytearray –&gt; Some encoded format like hex or base64 or ascii</p>
+<p>So following the hint you convert like this: hex -&gt; bytes -&gt; base64</p>
+<p>Here’s some examples for how it works</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">def</span> hex_to_bytes(hex_in):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>	<span class="cf">return</span> codecs.decode(hex_in, <span class="st">'hex'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="kw">def</span> base64_to_bytes(hex_in):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>	<span class="cf">return</span> codecs.decode(hex_in, <span class="st">'utf-8'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="kw">def</span> bytes_to_hex(byte_in):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>	<span class="cf">return</span> codecs.encode(byte_in,<span class="st">'hex'</span>).decode()</span></code></pre></div>
+<h2 id="challenge-2-fixed-xor">Challenge 2: Fixed XOR</h2>
+<p>For this one you want to use python’s ^ operator, which acts on two bytes and returns the logical XOR So the steps are</p>
+<ol type="1">
+<li>Convert both hex strings to bytes</li>
+<li>Create a new bytearray for the output</li>
+<li>Loop on the bytearrays for the two input strings</li>
+<li>Append the result of ^ to the output</li>
+<li>Encode the output bytes back to hex (im too lazy to check if i actually have to do this)</li>
+</ol>
+<h2 id="challenge-3-single-byte-xor-cipher">Challenge 3 Single-byte XOR cipher</h2>
+<p>I see why these are in order now… Theoretically it’s not hard, the problem for me was getting the stupid python syntax correct…</p>
+<p>Here’s the framework</p>
+<ol type="1">
+<li>Convert to bytes as usual</li>
+<li>Loop from 0 to 255 to loop over all the possible single chars</li>
+<li>Do a single-byte xor on each of those, here’s code from the tutorial I found</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">def</span> single_char_xor(in_raw, char_val):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>	output_bytes <span class="op">=</span> b<span class="st">''</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>	<span class="cf">for</span> byte <span class="kw">in</span> in_raw:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>		output_bytes<span class="op">+=</span><span class="bu">bytes</span>([byte <span class="op">^</span> char_val])</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>	<span class="cf">return</span> output_bytes</span></code></pre></div>
+<p>Source: https://laconicwolf.com/2018/05/29/cryptopals-challenge-3-single-byte-xor-cipher-in-python/</p>
+<p>For all the other python things, follow along with laconicwolf and google. I’ll lay out the rest of the framework, I would recomend just trying it from here and referring back here when you get stuck</p>
+<ol type="1">
+<li>Calculate a “english_score”, using something like this https://en.wikipedia.org/wiki/Letter_frequency to determine if something is a phrase or not<br />
+</li>
+<li>Create a dictionary of score/bytearray pairs and sort them to find which bytearray has the best score</li>
+</ol>
+<p>Since the best score = most like an english phrase, the key that makes the best english phrase is (probably) the best key. So thats it!</p>
+<h2 id="challenge-4-detecting-single-byte-xor-cipher">Challenge 4 Detecting single-byte XOR cipher</h2>
+<p>It’s challenge 3 but literally just more</p>
+<ol type="1">
+<li>file = open(“data.txt”)<br />
+</li>
+<li>Loop through the file line by line by using python magic, for line in file: detect_single_char_xor(line), where that function is your code from Challenge 3<br />
+</li>
+<li>Do the same sorting proccess as challenge 3 to again which determine which bytearray has the best score</li>
+</ol>
+<p>Now the party is really going!</p>
+<h2 id="aside-1-converting-plaintext-strings-and-chars-to-bytes">Aside 1: Converting plaintext strings and chars to bytes</h2>
+<ol type="1">
+<li>Declare an empty list, I called mine temp</li>
+<li>Append [ord(char)] for each char in the plaintext to temp</li>
+<li>my_bytes = bytes(temp)</li>
+</ol>
+<p>ord converts a char to it’s byte value, so we just make a bytearray of the bytes and we have the string in it’s bytes for us to mess around with!</p>
+<h2 id="aside-2-having-an-empty-bytearray-to-start-appending-bytes-to">Aside 2: Having an empty bytearray to start appending bytes to</h2>
+<ol type="1">
+<li>Literally just output_bytes = b’’</li>
+</ol>
+<p>What the hell python, how is this legal. You can redo the code from aside 1 with this new information btw</p>
+<h2 id="challenge-5-repeating-key-xor">Challenge 5: Repeating-key XOR</h2>
+<p>Mostly a combination of what we’ve seen already, I would reccomend making sure you can do this on your own before reading any guides, since it should be mostly copy paste from challenges 3 and 4</p>
+<ol type="1">
+<li>Take the key and plaintext</li>
+<li>Convert the plaintext into bytes</li>
+<li>Loop over the bytes and append on bytes([ord(key[count]) ^ byte]) where count is incremented and modded over the length of the keystring</li>
+<li>Return and you’re done!</li>
+</ol>
+<h1 id="challenge-6-break-repeating-key-xor">Challenge 6: Break repeating-key XOR</h1>
+<p>The big bad!</p>
+<p>Part 1: Hamming distance function</p>
+<p>List of mistakes I made along the way</p>
+<ol type="1">
+<li>You want to compare bits, not bytes, so convert the byte (which is really just an int) into a string of bits (Stackoverflow it, no shame in doing so)</li>
+<li>The bits may not have the same length, so you need to add the distance between their lengths to the dist</li>
+<li>Make sure you are indexing the string in the right direction</li>
+<li>Make sure not to index off the end of the bit string</li>
+</ol>
+<h2 id="part-2-rest-of-the-fucking-owl">Part 2: Rest of the fucking owl</h2>
+<p>Honestly I don’t know how my code managed to be bug free, but it somehow was…</p>
+<p>Here’s the functions I used:</p>
+<ol type="1">
+<li>hdist(bytes1,bytes2), hamming distance function</li>
+<li>take_block(in_bytes, a, b), returns the bytes from a to b</li>
+<li>blockify(in_bytes, block_size), converts the bytes into a list of block_size sized bytes</li>
+<li>transpose(blocks), takes the list from blockify and transposes it as detailed in the challenge (step 6)</li>
+<li>break_repeating_key_xor(enc_bytes, guess_len), the big boi</li>
+</ol>
+<p>hdist was explained in part 1 and the other functions are fairly self explanatory except for 5.</p>
+<p>Here’s what break_repeating_key_xor() did:</p>
+<ol type="1">
+<li>Loop over keysizes from 2 to guess_len</li>
+<li>Break the entire… As I was writing this I realized that I just rewrote the code for blockify(), basically line for line…</li>
+<li>(revised) Call blockify to create the list of blocks</li>
+<li>Use some nice python magic to make a list of all the dists for all the combinations of two blocks</li>
+<li>Sum it up and normalize it by the length of the list and the key_size</li>
+<li>Add it into the list of potential key_sizes</li>
+<li>(out of the key_size loop now) Sort the list</li>
+<li>Blockify by the optimal key_size</li>
+<li>Transpose them</li>
+<li>Call break_single_byte_xor() from challenge 3 to get a single-byte key</li>
+<li>Put em all together, use chr() to convert them back to ascii and you get your final key!</li>
+</ol>
+<p>Key = {Terminator X : Bring the noise} My code is available, but I would really not recommend comparing your answer to them as I am fairly inexperienced in writing <em>good</em> python code, I write <em>just barely good enough</em> python code. There’s defintely one or two off by one bugs in my code too.</p>
+<h2 id="challenge-7-aes-in-ecb-mode">Challenge 7 AES in ECB mode</h2>
+<p>I’m stupid and didn’t read the instructions, do this in code because you’ll need it alot later. I used pycrpyto</p>
+<h2 id="challenge-8-detecting-aes-in-ecb-mode">Challenge 8 Detecting AES in ECB mode</h2>
+<p>The main part of the challenge is figuring out how to actually detect ECB encryption, and the hint isn’t super helpful.</p>
+<p>The idea is that if there is a duplicate 16 byte plaintext in the original message, then it will also be duplicated in the ECB. But why we can assume that there is duplicated plaintext is beyond me… Here’s what I followed: https://crypto.stackexchange.com/questions/20941/why-shouldnt-i-use-ecb-encryption and https://obrien.io/writeups/crypto/2018/02/01/cryptopals-set-1-writeup/ to check my answers</p>
+<p>Anyway you want to do the type wrangling you’re probably used to now</p>
+<ol type="1">
+<li>Open the file</li>
+<li>lines = f.readlines()</li>
+<li>for line in lines</li>
+<li>unhexlify(line.strip()), the strip() is important! Don’t be dumb like me and forget it</li>
+<li>Append those onto a new list enc[]</li>
+<li>Loop through enc and call is_ecb() on them until it finds something</li>
+</ol>
+<p>is_ecb() is easy once you understand how to actually detect ecb</p>
+<ol type="1">
+<li>Find the # of bytes in in_bytes</li>
+<li>Find the # of bytes in in_bytes without duplicates</li>
+<li>If they’re the same length then it’s not ECB, but if the second is smaller then it’s probably ECB encoded</li>
+</ol>
+<p>The answer doesn’t seem to be something that’s “obviously correct” like in the earlier challenges, but I’m reasonable sure my code is correct.</p>
+<p>And that concludes Set 1! Pretty fun but also defintely frustrating at times when you get nothing but TypeErrors for 20 minutes straight trying to convert the input to what you want. Set 2 coming soon <em>tmtm</em></p>
+
+        </div>
+        <div id="footer">
+            Site proudly generated by
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+        </div>
+    </body>
+</html>
