@@ -2,5 +2,5 @@
 title: Contact
 ---
 Twitter: @rctcwyvrn 
-Email: rctcwyvrn [at] gmail [dot] com
 
+Email: rctcwyvrn [at] gmail [dot] com

@@ -13,6 +13,7 @@ stack build
 
 # Build new files
 echo "-----------------Building new files"
+cabal new-run site clean
 cabal new-run site build
 
 # commit to develop branch, probably uneccessary?

@@ -22,9 +22,7 @@ pandocCustomCompiler =
 
 main :: IO ()
 main = do
-
     generateCSS
-
     hakyll $ do
 
         match "images/*" $ do
