@@ -1,5 +1,5 @@
 <ul>
-	{% for post in section.pages %}
+	{% for post in section.pages | sort(attribute="date") | reverse %}
 	{% if post.extra.favorite %}
 	<li>
 		<a href="{{post.permalink}}">{{post.title}}</a> - {{post.date}}
