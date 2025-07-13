@@ -1,5 +1,8 @@
 {% extends "default.html" %}
 
+{% block title %}
+{{ page.title }}
+{% endblock title %}
 <div class="info">
     <p> Posted on {{ page.date }}
         {% if page.author %}
@@ -13,4 +16,6 @@
     </p>
 </div>
 
+{% block content %}
 {{ page.content }}
+{% endblock content %}

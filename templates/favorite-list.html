@@ -1,5 +1,5 @@
 <ul>
-	{% for post in all_posts %}
+	{% for post in section.pages %}
 	{% if post.favorite %}
 	<li>
 		<a href="{{post.url}}">{{post.title}}</a> - {{post.date}}

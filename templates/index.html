@@ -1,0 +1,13 @@
+{% extends "default.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<h2>Recent posts</h2>
+{% include "post-list.html" %}
+
+<h2>Favorites</h2>
+{% include "favorite-list.html" %}
+
+<p>…or you can find more in the <a href="/archive.html">archives</a>.</p>
+{% endblock content %}

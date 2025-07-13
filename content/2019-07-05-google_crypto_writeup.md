@@ -1,10 +1,13 @@
----
-title: Google CTF 2019 Crypto challenges writeup
-author: rctcwyvrn
-favorite: yes
-ctf_tag: yes
-blurb: Writeups for the three crypto challenges in google-ctf-2019
----
++++
+title = "Google CTF 2019 Crypto challenges writeup"
+authors = ["rctcwyvrn"]
+
+[extra]
+favorite = "yes"
+ctf_tag = "yes"
+blurb = "Writeups for the three crypto challenges in google-ctf-2019"
++++
+
 Code can be found [here](https://github.com/rctcwyvrn/ctf_stuff/tree/master/google-ctf-2019)
 
 Quantum Key Distribution

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>rctcwyvrn's blog - $title$</title>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            <a href="/">
+                <img src="/images/logo.gif" width="34" height="24" align="top">
+                rctcwyvrn's blog</a>
+        </div>
+        <div id="navigation">
+            <a href="/">Home</a>
+            <a href="https://github.com/rctcwyvrn">Github</a>
+            <a href="/info/about.html">About</a>
+            <a href="/info/contact.html">Contact</a>
+            <a href="/archive.html">Archive</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1>
+Cryptopals Set 1 writeup
+</h1>
+
+        
+&lt;p&gt;Code can be found &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rctcwyvrn&#x2F;ctf_stuff&#x2F;blob&#x2F;master&#x2F;cryptopals&#x2F;set_1.py&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Hi, a simple writeup for the cryptopals set 1 challenges for the crypto noob from a crypto noob. There are plenty of other tutorials, so look for a better one if this one makes no sense&lt;&#x2F;p&gt;
+&lt;p&gt;This is gonna mostly be a tutorial for how to do this byte stuff in python, which is really unintuitive to me anyway&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;NOTE: Some of the most trouble I had in these challenges was getting the data to the right types, and it involved lots and lots of stackoverflow and following other guides, remember there&#x27;s no shame in doing that and don&#x27;t feel bad when you see your 10th TypeError in a row&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;challenge-1-convert-hex-to-base64&quot;&gt;Challenge 1: Convert hex to base64&lt;&#x2F;h2&gt;
+&lt;p&gt;For this challenge you just need to know how to do this stuff in python, I used the codecs library&lt;&#x2F;p&gt;
+&lt;p&gt;Decode: Some encoded format like hex or base64 or ascii --&amp;gt; bytearray
+Encode: bytearray --&amp;gt; Some encoded format like hex or base64 or ascii&lt;&#x2F;p&gt;
+&lt;p&gt;So following the hint you convert like this: hex -&amp;gt; bytes -&amp;gt; base64&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s some examples for how it works&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;hex_to_bytes&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hex_in&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;codecs.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;decode&lt;&#x2F;span&gt;&lt;span&gt;(hex_in, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;hex&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;base64_to_bytes&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hex_in&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;codecs.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;decode&lt;&#x2F;span&gt;&lt;span&gt;(hex_in, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;utf-8&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;bytes_to_hex&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;byte_in&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;codecs.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;encode&lt;&#x2F;span&gt;&lt;span&gt;(byte_in,&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;hex&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;decode&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;challenge-2-fixed-xor&quot;&gt;Challenge 2: Fixed XOR&lt;&#x2F;h2&gt;
+&lt;p&gt;For this one you want to use python&#x27;s ^ operator, which acts on two bytes and returns the logical XOR
+So the steps are&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Convert both hex strings to bytes&lt;&#x2F;li&gt;
+&lt;li&gt;Create a new bytearray for the output&lt;&#x2F;li&gt;
+&lt;li&gt;Loop on the bytearrays for the two input strings&lt;&#x2F;li&gt;
+&lt;li&gt;Append the result of ^ to the output&lt;&#x2F;li&gt;
+&lt;li&gt;Encode the output bytes back to hex (im too lazy to check if i actually have to do this)&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;challenge-3-single-byte-xor-cipher&quot;&gt;Challenge 3 Single-byte XOR cipher&lt;&#x2F;h2&gt;
+&lt;p&gt;I see why these are in order now...
+Theoretically it&#x27;s not hard, the problem for me was getting the stupid python syntax correct...&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the framework&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Convert to bytes as usual&lt;&#x2F;li&gt;
+&lt;li&gt;Loop from 0 to 255 to loop over all the possible single chars&lt;&#x2F;li&gt;
+&lt;li&gt;Do a single-byte xor on each of those, here&#x27;s code from the tutorial I found&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;single_char_xor&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;in_raw&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;char_val&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;	output_bytes = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;byte &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;in_raw:
+&lt;&#x2F;span&gt;&lt;span&gt;		output_bytes+=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;bytes&lt;&#x2F;span&gt;&lt;span&gt;([byte ^ char_val])
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;output_bytes
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Source: https:&#x2F;&#x2F;laconicwolf.com&#x2F;2018&#x2F;05&#x2F;29&#x2F;cryptopals-challenge-3-single-byte-xor-cipher-in-python&#x2F;&lt;&#x2F;p&gt;
+&lt;p&gt;For all the other python things, follow along with laconicwolf and google. I&#x27;ll lay out the rest of the framework, I would recomend just trying it from here and referring back here when you get stuck&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Calculate a &quot;english_score&quot;, using something like this https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Letter_frequency to determine if something is a phrase or not&lt;&#x2F;li&gt;
+&lt;li&gt;Create a dictionary of score&#x2F;bytearray pairs and sort them to find which bytearray has the best score&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Since the best score = most like an english phrase, the key that makes the best english phrase is (probably) the best key. So thats it!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;challenge-4-detecting-single-byte-xor-cipher&quot;&gt;Challenge 4 Detecting single-byte XOR cipher&lt;&#x2F;h2&gt;
+&lt;p&gt;It&#x27;s challenge 3 but literally just more&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;file = open(&quot;data.txt&quot;)&lt;&#x2F;li&gt;
+&lt;li&gt;Loop through the file line by line by using python magic, for line in file: detect_single_char_xor(line), where that function is your code from Challenge 3&lt;&#x2F;li&gt;
+&lt;li&gt;Do the same sorting proccess as challenge 3 to again which determine which bytearray has the best score&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Now the party is really going!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;aside-1-converting-plaintext-strings-and-chars-to-bytes&quot;&gt;Aside 1: Converting plaintext strings and chars to bytes&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Declare an empty list, I called mine temp&lt;&#x2F;li&gt;
+&lt;li&gt;Append [ord(char)] for each char in the plaintext to temp&lt;&#x2F;li&gt;
+&lt;li&gt;my_bytes = bytes(temp)&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;ord converts a char to it&#x27;s byte value, so we just make a bytearray of the bytes and we have the string in it&#x27;s bytes for us to mess around with!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;aside-2-having-an-empty-bytearray-to-start-appending-bytes-to&quot;&gt;Aside 2: Having an empty bytearray to start appending bytes to&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Literally just output_bytes = b&#x27;&#x27;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;What the hell python, how is this legal. You can redo the code from aside 1 with this new information btw&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;challenge-5-repeating-key-xor&quot;&gt;Challenge 5: Repeating-key XOR&lt;&#x2F;h2&gt;
+&lt;p&gt;Mostly a combination of what we&#x27;ve seen already, I would reccomend making sure you can do this on your own before reading any guides, since it should be mostly copy paste from challenges 3 and 4&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Take the key and plaintext&lt;&#x2F;li&gt;
+&lt;li&gt;Convert the plaintext into bytes&lt;&#x2F;li&gt;
+&lt;li&gt;Loop over the bytes and append on bytes([ord(key[count]) ^ byte]) where count is incremented and modded over the length of the keystring&lt;&#x2F;li&gt;
+&lt;li&gt;Return and you&#x27;re done!&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h1 id=&quot;challenge-6-break-repeating-key-xor&quot;&gt;Challenge 6: Break repeating-key XOR&lt;&#x2F;h1&gt;
+&lt;p&gt;The big bad!&lt;&#x2F;p&gt;
+&lt;p&gt;Part 1: Hamming distance function&lt;&#x2F;p&gt;
+&lt;p&gt;List of mistakes I made along the way&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;You want to compare bits, not bytes, so convert the byte (which is really just an int) into a string of bits (Stackoverflow it, no shame in doing so)&lt;&#x2F;li&gt;
+&lt;li&gt;The bits may not have the same length, so you need to add the distance between their lengths to the dist&lt;&#x2F;li&gt;
+&lt;li&gt;Make sure you are indexing the string in the right direction&lt;&#x2F;li&gt;
+&lt;li&gt;Make sure not to index off the end of the bit string&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;part-2-rest-of-the-fucking-owl&quot;&gt;Part 2: Rest of the fucking owl&lt;&#x2F;h2&gt;
+&lt;p&gt;Honestly I don&#x27;t know how my code managed to be bug free, but it somehow was...&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the functions I used:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;hdist(bytes1,bytes2), hamming distance function&lt;&#x2F;li&gt;
+&lt;li&gt;take_block(in_bytes, a, b), returns the bytes from a to b&lt;&#x2F;li&gt;
+&lt;li&gt;blockify(in_bytes, block_size), converts the bytes into a list of block_size sized bytes&lt;&#x2F;li&gt;
+&lt;li&gt;transpose(blocks), takes the list from blockify and transposes it as detailed in the challenge (step 6)&lt;&#x2F;li&gt;
+&lt;li&gt;break_repeating_key_xor(enc_bytes, guess_len), the big boi&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;hdist was explained in part 1 and the other functions are fairly self explanatory except for 5.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s what break_repeating_key_xor() did:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Loop over keysizes from 2 to guess_len&lt;&#x2F;li&gt;
+&lt;li&gt;Break the entire... As I was writing this I realized that I just rewrote the code for blockify(), basically line for line...&lt;&#x2F;li&gt;
+&lt;li&gt;(revised) Call blockify to create the list of blocks&lt;&#x2F;li&gt;
+&lt;li&gt;Use some nice python magic to make a list of all the dists for all the combinations of two blocks&lt;&#x2F;li&gt;
+&lt;li&gt;Sum it up and normalize it by the length of the list and the key_size&lt;&#x2F;li&gt;
+&lt;li&gt;Add it into the list of potential key_sizes&lt;&#x2F;li&gt;
+&lt;li&gt;(out of the key_size loop now) Sort the list&lt;&#x2F;li&gt;
+&lt;li&gt;Blockify by the optimal key_size&lt;&#x2F;li&gt;
+&lt;li&gt;Transpose them&lt;&#x2F;li&gt;
+&lt;li&gt;Call break_single_byte_xor() from challenge 3 to get a single-byte key&lt;&#x2F;li&gt;
+&lt;li&gt;Put em all together, use chr() to convert them back to ascii and you get your final key!&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Key = {Terminator X : Bring the noise}
+My code is available, but I would really not recommend comparing your answer to them as I am fairly inexperienced in writing &lt;em&gt;good&lt;&#x2F;em&gt; python code, I write &lt;em&gt;just barely good enough&lt;&#x2F;em&gt; python code. There&#x27;s defintely one or two off by one bugs in my code too.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;challenge-7-aes-in-ecb-mode&quot;&gt;Challenge 7 AES in ECB mode&lt;&#x2F;h2&gt;
+&lt;p&gt;I&#x27;m stupid and didn&#x27;t read the instructions, do this in code because you&#x27;ll need it alot later. I used pycrpyto&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;challenge-8-detecting-aes-in-ecb-mode&quot;&gt;Challenge 8 Detecting AES in ECB mode&lt;&#x2F;h2&gt;
+&lt;p&gt;The main part of the challenge is figuring out how to actually detect ECB encryption, and the hint isn&#x27;t super helpful.&lt;&#x2F;p&gt;
+&lt;p&gt;The idea is that if there is a duplicate 16 byte plaintext in the original message, then it will also be duplicated in the ECB. But why we can assume that there is duplicated plaintext is beyond me...
+Here&#x27;s what I followed: https:&#x2F;&#x2F;crypto.stackexchange.com&#x2F;questions&#x2F;20941&#x2F;why-shouldnt-i-use-ecb-encryption
+and https:&#x2F;&#x2F;obrien.io&#x2F;writeups&#x2F;crypto&#x2F;2018&#x2F;02&#x2F;01&#x2F;cryptopals-set-1-writeup&#x2F; to check my answers&lt;&#x2F;p&gt;
+&lt;p&gt;Anyway you want to do the type wrangling you&#x27;re probably used to now&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the file&lt;&#x2F;li&gt;
+&lt;li&gt;lines = f.readlines()&lt;&#x2F;li&gt;
+&lt;li&gt;for line in lines&lt;&#x2F;li&gt;
+&lt;li&gt;unhexlify(line.strip()), the strip() is important! Don&#x27;t be dumb like me and forget it&lt;&#x2F;li&gt;
+&lt;li&gt;Append those onto a new list enc[]&lt;&#x2F;li&gt;
+&lt;li&gt;Loop through enc and call is_ecb() on them until it finds something&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;is_ecb() is easy once you understand how to actually detect ecb&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Find the # of bytes in in_bytes&lt;&#x2F;li&gt;
+&lt;li&gt;Find the # of bytes in in_bytes without duplicates&lt;&#x2F;li&gt;
+&lt;li&gt;If they&#x27;re the same length then it&#x27;s not ECB, but if the second is smaller then it&#x27;s probably ECB encoded&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The answer doesn&#x27;t seem to be something that&#x27;s &quot;obviously correct&quot; like in the earlier challenges, but I&#x27;m reasonable sure my code is correct.&lt;&#x2F;p&gt;
+&lt;p&gt;And that concludes Set 1! Pretty fun but also defintely frustrating at times when you get nothing but TypeErrors for 20 minutes straight trying to convert the input to what you want.
+Set 2 coming soon &lt;em&gt;tmtm&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+
+
+    </div>
+</body>
+
+</html>
