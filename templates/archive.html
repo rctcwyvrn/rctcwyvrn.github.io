@@ -1,5 +1,7 @@
+{% extends "default.html" %}
+
 <h2>All my previous posts:</h2>
-$partial("templates/post-list.html")$
+{% include "post-list.html" %}
 
 <h2>CTF related:</h2>
-$partial("templates/ctf-list.html")$
+{% include "ctf-list.html" %}

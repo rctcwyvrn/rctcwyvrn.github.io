@@ -1,10 +1,10 @@
 <ul>
-    $for(posts)$
-    	$if(ctf_tag)$
-	        <li>
-				<a href="$url$">$title$</a> - $date$
-				<p id="blurb">$blurb$</p>
-	        </li>
-	    $endif$
-    $endfor$
+	{% for post in posts %}
+	{% if post.ctf_tag %}
+	<li>
+		<a href="{{post.url}}">{{post.title}}</a> - {{post.date}}
+		<p id="blurb">{{post.blurb}}</p>
+	</li>
+	{% endif %}
+	{% endfor %}
 </ul>

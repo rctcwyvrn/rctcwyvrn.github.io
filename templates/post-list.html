@@ -1,8 +1,8 @@
 <ul>
-    $for(posts)$
-        <li>
-            <a href="$url$">$title$</a> - $date$
-            <p id="blurb">$blurb$</p>
-        </li>
-    $endfor$
+    {% for post in posts %}$
+    <li>
+        <a href="{{post.url}}">{{post.title}}</a> - {{post.date}}
+        <p id="blurb">{{post.blurb}}</p>
+    </li>
+    {% endfor %}
 </ul>

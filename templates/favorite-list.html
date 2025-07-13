@@ -1,9 +1,9 @@
 <ul>
-    $for(all_posts)$
-    	$if(favorite)$
-	        <li>
-				<a href="$url$">$title$</a> - $date$
-	        </li>
-	    $endif$
-    $endfor$
+	{% for post in all_posts %}
+	{% if post.favorite %}
+	<li>
+		<a href="{{post.url}}">{{post.title}}</a> - {{post.date}}
+	</li>
+	{% endif %}
+	{% endfor %}
 </ul>

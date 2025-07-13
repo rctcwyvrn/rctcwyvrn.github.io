@@ -1,17 +1,16 @@
+{% extends "default.html" %}
+
 <div class="info">
-   <p> Posted on $date$
-    $if(author)$
-        by $author$
-    $endif$
-</p>
+    <p> Posted on {{ page.date }}
+        {% if page.author %}
+        by {{ page.author }}
+        {% endif %}
+    </p>
     <p>
-    $if(ctf_tag)$
-    	Team: <a href="https://ubcctf.github.io/ ">Maple Bacon, University of British Columbia</a>
-    $endif$
-</p>
+        {% if page.ctf_tag %}
+        Team: <a href="https://ubcctf.github.io/ ">Maple Bacon, University of British Columbia</a>
+        {% endif %}
+    </p>
 </div>
 
-$if(abit_tag)$
-	$partial("templates/abit.html")$
-$endif$
-$body$
+{{ page.content }}
