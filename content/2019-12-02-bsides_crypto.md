@@ -1,10 +1,12 @@
----
-title: BSides Ottawa crypto challenges writeup
-author: rctcwyvrn
-favorite: yes
-ctf_tag: yes
-blurb: Writeups for some more crypto challenges, featuring a very classic symmetric crypto attack, the slide attack
----
++++
+title = " BSides Ottawa crypto challenges writeup"
+authors = ["rctcwyvrn"]
+
+[extra]
+favorite = "yes"
+ctf_tag = "yes"
+blurb = "Writeups for some more crypto challenges, featuring a very classic symmetric crypto attack, the slide attack"
++++
 Code can be found [here](https://github.com/rctcwyvrn/ctf_stuff/tree/master/bsides)
 
 These were by far the best cryptology challenges I've had the pleasure of doing in a CTF. They were fun, difficult, unique, and very rewarding. In hindsight, there really wasn't any close staring at the code for bugs or googling for similar problems in past CTFs for any of these challenges. Most of them were just good ol' math, and not extremely difficult math either.

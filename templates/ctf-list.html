@@ -1,9 +1,10 @@
 <ul>
-	{% for post in posts %}
-	{% if post.ctf_tag %}
+	{% set s = get_section(path="_index.md") %}
+	{% for post in s.pages | reverse %}
+	{% if post.extra.ctf_tag %}
 	<li>
-		<a href="{{post.url}}">{{post.title}}</a> - {{post.date}}
-		<p id="blurb">{{post.blurb}}</p>
+		<a href="{{post.permalink}}">{{post.title}}</a> - {{post.date}}
+		<p id="blurb">{{post.extra.blurb}}</p>
 	</li>
 	{% endif %}
 	{% endfor %}

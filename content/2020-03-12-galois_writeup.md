@@ -1,10 +1,12 @@
----
-title: UTCTF Galois. Remember kids, never repeat a nonce!
-author: rctcwyvrn
-favorite: yes
-ctf_tag: yes
-blurb: A writeup for a nonce reptition attack on GCM mode
----
++++
+title = "UTCTF Galois. Remember kids, never repeat a nonce!"
+authors = ["rctcwyvrn"]
+
+[extra]
+favorite = "yes"
+ctf_tag = "yes"
+blurb = "A writeup for a nonce reptition attack on GCM mode"
++++
 Code can be found [here](https://github.com/rctcwyvrn/ctf_stuff/tree/master/utctf/galois)
 
 As you probably read in the title, this is a writeup about a crypto challenge involving nonce repeition. Namely an AES-GCM challenge, where we are given an encrypted ciphertext and a encryption/decrpytion oracle, but no tag to go along with our ciphertext.

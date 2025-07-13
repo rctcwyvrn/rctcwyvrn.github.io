@@ -1,8 +1,10 @@
 <ul>
 	{% for post in section.pages %}
-	{% if post.favorite %}
+	{% if post.extra.favorite %}
 	<li>
-		<a href="{{post.url}}">{{post.title}}</a> - {{post.date}}
+		<a href="{{post.permalink}}">{{post.title}}</a> - {{post.date}}
+		<p id="blurb">{{post.extra.blurb}}</p>
+
 	</li>
 	{% endif %}
 	{% endfor %}
