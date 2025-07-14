@@ -138,6 +138,10 @@ p {
     color: white
 }
 
+blockquote>p {
+    color: rgb(165, 173, 206)
+}
+
 p>code,
 li>code {
     background: #555;
