@@ -103,7 +103,7 @@ MirageOS is honestly probably extremely similar to what I have in mind (possibly
 
 # Milestones
 
-### Bootloader
+## Bootloader
 1. Something that boots in qemu and writes "hi" to the display
 
 Requirements:
@@ -111,7 +111,7 @@ Requirements:
 - A display driver (in ocaml)
 
 
-### Compiler
+## Compiler
 1. A runnable hello world in lambda-lite (a stripped down ocaml-lambda)
 
 Requirements: A compiler from lambda-lite to x86
@@ -122,17 +122,17 @@ Requirements: A full fat ocaml-lambda compiler, hooked up to the ocaml frontend,
 
 3. Compiling `base` and `async`: A runnable ocaml hello world under an `async` `Command.t`
 
-### First boot test
+## First boot test
 1. Something that boots in qemu and writes an ocaml string to the display
 
 Requirements: Taping the ocaml compiler to the bootloader
 
-### Building libraries
+## Building libraries
 1. Start writing `soil` (implementing an interface around the display driver)
 2. Write a keyboard driver (in ocaml) and its `soil` interface
 3. Write an `echo` program which just takes keyboard input and writes it to display
 
-### Http server
+## Http server
 1. Write a network driver (in ocaml) and its `soil` interface
 2. Write a http/af backend using `soil`
 3. Host a hello world blog post using `terrarium`
