@@ -143,3 +143,8 @@ Requirements: Taping the ocaml compiler to the bootloader
 - Poke around `chocolate-milk`
 - Read [https://www.sigarch.org/leave-your-os-at-home-the-rise-of-library-operating-systems/](https://www.sigarch.org/leave-your-os-at-home-the-rise-of-library-operating-systems/) and [https://events19.linuxfoundation.org/wp-content/uploads/2017/12/Library-OS-is-the-New-Container-Why-is-Library-OS-A-Better-Option-for-Compatibility-and-Sandboxing-Chia-Che-Tsai-UC-Berkeley.pdf](https://events19.linuxfoundation.org/wp-content/uploads/2017/12/Library-OS-is-the-New-Container-Why-is-Library-OS-A-Better-Option-for-Compatibility-and-Sandboxing-Chia-Che-Tsai-UC-Berkeley.pdf)
 - Poke around [https://github.com/gramineproject/gramine](https://github.com/gramineproject/gramine)
+
+# Things to think about
+- Other library operating systems
+- Do I want to write this in rust instead?
+- Do I need to write any compiler components? Can I get around that entirely?
