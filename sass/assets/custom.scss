@@ -1,6 +1,6 @@
 /* @import url(gruvbox.css); */
 body {
-    background-color: #333333;
+    background-color: rgb(48, 52, 70);
     font-family: "Overpass Mono",
         monospace;
     /* color:#df9fdf; */
@@ -19,7 +19,7 @@ pre.highlight {
 
 .title {
     font-family: "Inconsolata", monospace;
-    color: #ff99ff;
+    color: rgb(244, 184, 228);
     text-transform: uppercase;
     font-size: 48px;
     padding-top: 12px
@@ -27,7 +27,7 @@ pre.highlight {
 
 div#header {
     color: white;
-    border-bottom: 2px solid #ff99ff;
+    border-bottom: 2px solid rgb(244, 184, 228);
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
 }
@@ -64,13 +64,6 @@ div#header #navigation {
     font-size: 13px
 }
 
-/*#logo {
- height:100%;
- float:left;
- padding-right:35px
-}*/
-
-
 .post-info {
     text-align: center
 }
@@ -85,7 +78,7 @@ p>code {
     background: #555;
     border-radius: 3px;
     padding: 0 2px 1px;
-    color: #ff99ff
+    color: rgb(244, 184, 228)
 }
 
 footer {
@@ -95,7 +88,7 @@ footer {
 }
 
 div#footer {
-    border-top: solid 2px #ff99ff;
+    border-top: solid 2px rgb(244, 184, 228);
     font-size: 12px;
     margin-top: 30px;
     padding: 12px 0px 12px 0px;
@@ -116,12 +109,20 @@ div.info {
 
 h1 {
     padding-top: 10px;
+    color: rgb(202, 158, 230);
     text-align: left;
     font-size: 24px
 }
 
 h2 {
     padding-top: 10px;
+    color: rgb(238, 190, 190);
+    font-size: 20px
+}
+
+h3 {
+    padding-top: 10px;
+    color: rgb(239, 159, 118);
     font-size: 20px
 }
 
@@ -130,17 +131,22 @@ a {
     text-decoration-style: none
 }
 
+li {
+    color: white;
+    text-decoration-style: none
+}
+
 a:hover {
-    color: #ff99ff;
+    color: rgb(244, 184, 228);
     text-decoration-style: none
 }
 
 p {
-    color: #cfcfcf
+    color: white
 }
 
 #blurb {
-    color: #B2ADAD;
+    color: grey;
     margin-left: 5em
 }
 

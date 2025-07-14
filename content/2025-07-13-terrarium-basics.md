@@ -101,6 +101,45 @@ Hubris uses IPC and tasks with one supervisor task to handle running things. I w
 
 MirageOS is honestly probably extremely similar to what I have in mind (possibly identical, I haven't actually dug that deep into it yet). Even if what I'm making is just MirageOS, I want to make it my own
 
+# Milestones
+
+### Bootloader
+1. Something that boots in qemu and writes "hi" to the display
+
+Requirements:
+- A bootloader (in rust and asm)
+- A display driver (in ocaml)
+
+
+### Compiler
+1. A runnable hello world in lambda-lite (a stripped down ocaml-lambda)
+
+Requirements: A compiler from lambda-lite to x86
+
+2. A runnable ocaml hello world 
+
+Requirements: A full fat ocaml-lambda compiler, hooked up to the ocaml frontend, running the ocaml runtime
+
+3. Compiling `base` and `async`: A runnable ocaml hello world under an `async` `Command.t`
+
+### First boot test
+1. Something that boots in qemu and writes an ocaml string to the display
+
+Requirements: Taping the ocaml compiler to the bootloader
+
+### Building libraries
+1. Start writing `soil` (implementing an interface around the display driver)
+2. Write a keyboard driver (in ocaml) and its `soil` interface
+3. Write an `echo` program which just takes keyboard input and writes it to display
+
+### Http server
+1. Write a network driver (in ocaml) and its `soil` interface
+2. Write a http/af backend using `soil`
+3. Host a hello world blog post using `terrarium`
+
 # Todo tomorrow
 - Dig into MirageOS
 - Re-listen to the Hubris Oxide & Friends podcast episode
+- Poke around `chocolate-milk`
+- Read [https://www.sigarch.org/leave-your-os-at-home-the-rise-of-library-operating-systems/](https://www.sigarch.org/leave-your-os-at-home-the-rise-of-library-operating-systems/) and [https://events19.linuxfoundation.org/wp-content/uploads/2017/12/Library-OS-is-the-New-Container-Why-is-Library-OS-A-Better-Option-for-Compatibility-and-Sandboxing-Chia-Che-Tsai-UC-Berkeley.pdf](https://events19.linuxfoundation.org/wp-content/uploads/2017/12/Library-OS-is-the-New-Container-Why-is-Library-OS-A-Better-Option-for-Compatibility-and-Sandboxing-Chia-Che-Tsai-UC-Berkeley.pdf)
+- Poke around [https://github.com/gramineproject/gramine](https://github.com/gramineproject/gramine)
