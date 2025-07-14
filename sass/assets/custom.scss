@@ -74,13 +74,6 @@ div#header #navigation {
     padding: 0 5px
 }
 
-p>code {
-    background: #555;
-    border-radius: 3px;
-    padding: 0 2px 1px;
-    color: rgb(244, 184, 228)
-}
-
 footer {
     margin-bottom: 25px;
     padding-top: 30px;
@@ -143,6 +136,14 @@ a:hover {
 
 p {
     color: white
+}
+
+p>code,
+li>code {
+    background: #555;
+    border-radius: 3px;
+    padding: 0 2px 1px;
+    color: rgb(244, 184, 228)
 }
 
 #blurb {
