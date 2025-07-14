@@ -100,3 +100,7 @@ Hubris uses IPC and tasks with one supervisor task to handle running things. I w
 2. [MirageOS](https://mirage.io/) 
 
 MirageOS is honestly probably extremely similar to what I have in mind (possibly identical, I haven't actually dug that deep into it yet). Even if what I'm making is just MirageOS, I want to make it my own
+
+# Todo tomorrow
+- Dig into MirageOS
+- Re-listen to the Hubris Oxide & Friends podcast episode
