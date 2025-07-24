@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>lily's blog</title>
+    <link rel="stylesheet" type="text/css" href="/assets/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/syntax.css">
+    <link rel="icon" href="/images/logo.gif" type="image/gif">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <a rel="me" href="https://hachyderm.io/@rctcwyvrn"></a>
+</head>
+
+<body>
+    <script src="/cat/oneko.js"></script>
+    <div id="header">
+        <div id="logo">
+            <a href="/">
+                <img src="/images/logo.gif" width="34" height="24" align="top">
+                lily's blog</a>
+        </div>
+        <div id="navigation">
+            <a href="/">Home</a>
+            <a href="https://github.com/rctcwyvrn">Github</a>
+            <a href="/info/about/">About</a>
+            <a href="/info/contact/">Contact</a>
+            <a href="/archive/">Archive</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1>
+Day 2: Reading up on unikernels
+</h1>
+
+        
+<div class="info">
+    <p> Posted on 2025-07-14
+        
+        by [rctcwyvrn]
+        
+    </p>
+    <p>
+        
+    </p>
+</div>
+<p>First things first, <a href="https://github.com/rctcwyvrn/terrarium">https://github.com/rctcwyvrn/terrarium</a> is set up, yippee!</p>
+<p>Secondly, lets do some reading.</p>
+<p>On the reading list today are</p>
+<h1 id="the-unikernel-wikipedia-article">The unikernel wikipedia article</h1>
+<p><a href="https://en.wikipedia.org/wiki/Unikernel">https://en.wikipedia.org/wiki/Unikernel</a></p>
+<p>Mostly some more background on what exactly a unikernel is, and it's benefits and disadvantages</p>
+<p>Mostly duplicated with notes from...</p>
+<h1 id="unikernels-rise-of-the-virtual-library-operating-system">Unikernels: Rise of the Virtual Library Operating System</h1>
+<p><a href="https://queue.acm.org/detail.cfm?id=2566628">https://queue.acm.org/detail.cfm?id=2566628</a></p>
+<p>A much more in-depth exploration into unikernels.</p>
+<p>Talks about the wins that a unikernel brings</p>
+<ul>
+<li>Fast boots</li>
+<li>Predictable performance (low latency use cases)</li>
+<li>Small binaries</li>
+<li>Everything in one language means you don't need to learn both the language and the OS</li>
+</ul>
+<p>And the drawbacks</p>
+<ul>
+<li>Running multiple applications is hard/impossible</li>
+<li>Device drivers have to be rewritten</li>
+</ul>
+<p>Hillarious quote:</p>
+<blockquote>
+<p>The fast-moving world of commodity PC hardware meant that, no matter how many graduate students were tasked to write drivers, any research libOS prototype was doomed to become obsolete in a few short years</p>
+</blockquote>
+<p>But VMs solve the second problem pretty handily, by providing a stable virtual device that you can write drivers for and never need to worry about!</p>
+<blockquote>
+<p>In MirageOS, rather than treating the database, web server, etc. as independent applications that must be connected by configuration files, they are treated as libraries within a single application, allowing the application developer to configure them using either simple library calls for dynamic parameters or metaprogramming tools for static parameters. This has the useful effect of making configuration decisions explicit and programmable in a host language rather than manipulating many ad-hoc text files and thus benefiting from static-analysis tools and the compiler's type checker. The result is a big reduction in the effort needed to configure complex multiservice application VMs.</p>
+</blockquote>
+<p>Explains exactly why I find the unikernel concept so facinating</p>
+<h1 id="other-stuff-i-skimmed-through">Other stuff I skimmed through</h1>
+<p><a href="https://www.youtube.com/watch?v=tR46qctHrCY">https://www.youtube.com/watch?v=tR46qctHrCY</a>
+<a href="https://www.youtube.com/watch?v=uj6pO8zXGNg">https://www.youtube.com/watch?v=uj6pO8zXGNg</a></p>
+<p><a href="https://os.phil-opp.com/">https://os.phil-opp.com/</a> looks very interesting
+<a href="https://github.com/StardustOS/stardust-oxide">https://github.com/StardustOS/stardust-oxide</a> and <a href="https://github.com/hermit-os/hermit-rs">https://github.com/hermit-os/hermit-rs</a> as other rust unikernels</p>
+
+
+    </div>
+</body>
+
+</html>

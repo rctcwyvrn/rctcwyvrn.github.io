@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>lily's blog</title>
+    <link rel="stylesheet" type="text/css" href="/assets/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/syntax.css">
+    <link rel="icon" href="/images/logo.gif" type="image/gif">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <a rel="me" href="https://hachyderm.io/@rctcwyvrn"></a>
+</head>
+
+<body>
+    <script src="/cat/oneko.js"></script>
+    <div id="header">
+        <div id="logo">
+            <a href="/">
+                <img src="/images/logo.gif" width="34" height="24" align="top">
+                lily's blog</a>
+        </div>
+        <div id="navigation">
+            <a href="/">Home</a>
+            <a href="https://github.com/rctcwyvrn">Github</a>
+            <a href="/info/about/">About</a>
+            <a href="/info/contact/">Contact</a>
+            <a href="/archive/">Archive</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1>
+Exploring MirageOS
+</h1>
+
+        
+<div class="info">
+    <p> Posted on 2025-07-13
+        
+        by [rctcwyvrn]
+        
+    </p>
+    <p>
+        
+    </p>
+</div>
+<p>Ongoing blog post for digging into MirageOS</p>
+<h1 id="devices">Devices</h1>
+<p>Devices: <a href="https://github.com/mirage/mirage/tree/main/lib/devices">https://github.com/mirage/mirage/tree/main/lib/devices</a></p>
+<h1 id="functoria">Functoria</h1>
+<p>How MirageOS compiles the OCaml: <a href="https://github.com/mirage/functoria">https://github.com/mirage/functoria</a></p>
+<blockquote>
+<p>Phases
+Configuration is separated into phases:</p>
+</blockquote>
+<blockquote>
+<p>Specialized DSL keys The specialized DSL's keys (along with functoria's keys) are resolved.
+Compilation and dynlink of the config file.
+Registering. When the register function is called, the list of jobs is recorded and immediately transformed into a graph.
+Switching keys and tree evaluation. The switching keys are the keys inside the [If]. Those keys are resolved and the graph is simplified. At this point, the actual modules used are fully known. Note: for the describe command, Only partial evaluation is done, which means decision nodes are resolved only if the value was given on the command line, disregarding default values.
+Full Key resolution. Once the actual modules are known, we can resolve all the keys and figure out libraries and packages.
+Dependency handling, configuration and code emission.
+Phases 1. to 4. are also applied for the clean command.</p>
+</blockquote>
+<h1 id="paf"><code>paf</code></h1>
+<p><a href="https://github.com/dinosaure/paf-le-chien">https://github.com/dinosaure/paf-le-chien</a></p>
+<p>I wonder if I can steal <code>paf</code> as my http layer -&gt; ie if the library can have it's entire backend swapped out for something else...</p>
+<p>It kinda looks like the answer to that is yes?</p>
+<blockquote>
+<p>Paf wants to provide an agnostic implementation of HTTP with the ability to launch a server or a client from an user-defined context: a Mimic.ctx. It does not exist one and unique way to use Paf because the context can be:
+a MirageOS
+a simple executable
+something else like a JavaScript script (with js_of_ocaml)</p>
+</blockquote>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code></code></pre>
+
+
+    </div>
+</body>
+
+</html>

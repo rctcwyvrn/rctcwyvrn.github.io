@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>lily's blog</title>
+    <link rel="stylesheet" type="text/css" href="/assets/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/syntax.css">
+    <link rel="icon" href="/images/logo.gif" type="image/gif">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <a rel="me" href="https://hachyderm.io/@rctcwyvrn"></a>
+</head>
+
+<body>
+    <script src="/cat/oneko.js"></script>
+    <div id="header">
+        <div id="logo">
+            <a href="/">
+                <img src="/images/logo.gif" width="34" height="24" align="top">
+                lily's blog</a>
+        </div>
+        <div id="navigation">
+            <a href="/">Home</a>
+            <a href="https://github.com/rctcwyvrn">Github</a>
+            <a href="/info/about/">About</a>
+            <a href="/info/contact/">Contact</a>
+            <a href="/archive/">Archive</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1>
+Day 1: Scoping out the project
+</h1>
+
+        
+<div class="info">
+    <p> Posted on 2025-07-13
+        
+        by [rctcwyvrn]
+        
+    </p>
+    <p>
+        
+    </p>
+</div>
+<p>New beginnings are always so exciting!</p>
+<p>What did I do today?</p>
+<p>Spend like three hours setting up mastodon and this blog properly</p>
+<p>Haha</p>
+<p>Very productive</p>
+<p>Anyway</p>
+<h1 id="terrarium">Terrarium</h1>
+<p><a href="https://github.com/rctcwyvrn/terrarium">Terrarium</a> is the working title for the project that I'd like to work on every day for the next year or so</p>
+<p>The gist is that I'd like to create a Hubris/MirageOS inspired unikernel compiler that can compile OCaml programs into bootable kernels</p>
+<p>This is extreme hubris</p>
+<h1 id="what-i-envision">What I envision</h1>
+<p>Here's what I have in mind, using the example of a webserver</p>
+<ol>
+<li>You write a web server in OCaml</li>
+</ol>
+<p>Using a copy of something like <a href="https://github.com/anuragsoni/shuttle_http">https://github.com/anuragsoni/shuttle_http</a></p>
+<ol start="2">
+<li>The http library calls into <code>soil</code></li>
+</ol>
+<p><code>soil</code> being the equivalent of <code>core_unix</code> for terrarium, giving an interface for OS functionality</p>
+<p>Running example: our http library calls <code>Soil.pipe</code> on a <code>Soil.File_descriptor.t</code></p>
+<ol start="3">
+<li><code>soil</code> calls into libraries also written in OCaml which implement the OS</li>
+</ol>
+<p>A <code>Soil.File_descriptor.t</code> is just an OCaml datatype and provides functions for storing data to disk</p>
+<p><code>soil</code> implements storing data to disk by calling into OCaml driver libraries</p>
+<ol start="4">
+<li>An OCaml driver library flushes the bytes to disk</li>
+</ol>
+<p>I Have No Idea How Drivers Work :smile:</p>
+<p>But the idea is that it would be an <code>async</code> based interface, meaning it would do async stuff to return a <code>Deferred.t</code> in place of the blocking task of reading/writing bytes from/to disk</p>
+<h1 id="why-do-i-think-this-could-work">Why do I think this could work?</h1>
+<p>From my very naive understanding, OCaml makes for a decent OS runtime</p>
+<ul>
+<li>It's designed to compile to a single static binary</li>
+<li>The garbage collector can clean up all the memory if everything is an OCaml object</li>
+<li>The <code>async</code> runtime can handle threading if the entire program is just one giant async scheduler + async jobs</li>
+</ul>
+<h1 id="what-do-i-need">What do I need?</h1>
+<p>This is a classic situation of not knowing what I don't know</p>
+<p>Here is what I do know that I'll need</p>
+<h2 id="something-to-boot">Something to boot</h2>
+<p>Bootloading is something I'm not at all familiar with, but the plan will be to write this in Rust (ala <a href="https://github.com/gamozolabs/chocolate_milk">https://github.com/gamozolabs/chocolate_milk</a>)</p>
+<p>I expect to steal a lot from that project</p>
+<h2 id="an-ocaml-compiler-pipeline">An OCaml compiler pipeline</h2>
+<p>I'm not doing OCaml parsing and typechecking (been there, done that, it didn't end well - that's how this project died it's first death) so the plan will be to write a compiler pipeline starting from <strong>OCaml Lambda</strong> and compiling down to x86</p>
+<p>Important reference: <a href="https://github.com/stedolan/malfunction">https://github.com/stedolan/malfunction</a></p>
+<p>This will probably be structured somewhat like the <a href="https://github.com/cpsc411/cpsc411-book">UBC CPSC 411 compiler</a> since that's a compiler I've already implemented once before</p>
+<p>Another reference I'll be using is Compiling with Continuations (probably)</p>
+<h2 id="soil">Soil</h2>
+<p>A library that implements <code>core_unix</code>-like functionality by calling into...</p>
+<h2 id="driver-libraries">Driver libraries</h2>
+<p>A set of driver libraries that can drive network IO, disk, and displays</p>
+<h1 id="steal-ideas-from">Steal ideas from</h1>
+<p>The obvious two</p>
+<ol>
+<li><a href="https://hubris.oxide.computer/reference/">Hubris</a></li>
+</ol>
+<p>Hubris uses IPC and tasks with one supervisor task to handle running things. I want to have the OCaml async runtime and the OCaml calling convention handle that for me</p>
+<ol start="2">
+<li><a href="https://mirage.io/">MirageOS</a></li>
+</ol>
+<p>MirageOS is honestly probably extremely similar to what I have in mind (possibly identical, I haven't actually dug that deep into it yet). Even if what I'm making is just MirageOS, I want to make it my own</p>
+<h1 id="milestones">Milestones</h1>
+<h2 id="bootloader">Bootloader</h2>
+<ol>
+<li>Something that boots in qemu and writes "hi" to the display</li>
+</ol>
+<p>Requirements:</p>
+<ul>
+<li>A bootloader (in rust and asm)</li>
+<li>A display driver (in ocaml)</li>
+</ul>
+<h2 id="compiler">Compiler</h2>
+<ol>
+<li>A runnable hello world in lambda-lite (a stripped down ocaml-lambda)</li>
+</ol>
+<p>Requirements: A compiler from lambda-lite to x86</p>
+<ol start="2">
+<li>A runnable ocaml hello world</li>
+</ol>
+<p>Requirements: A full fat ocaml-lambda compiler, hooked up to the ocaml frontend, running the ocaml runtime</p>
+<ol start="3">
+<li>Compiling <code>base</code> and <code>async</code>: A runnable ocaml hello world under an <code>async</code> <code>Command.t</code></li>
+</ol>
+<h2 id="first-boot-test">First boot test</h2>
+<ol>
+<li>Something that boots in qemu and writes an ocaml string to the display</li>
+</ol>
+<p>Requirements: Taping the ocaml compiler to the bootloader</p>
+<h2 id="building-libraries">Building libraries</h2>
+<ol>
+<li>Start writing <code>soil</code> (implementing an interface around the display driver)</li>
+<li>Write a keyboard driver (in ocaml) and its <code>soil</code> interface</li>
+<li>Write an <code>echo</code> program which just takes keyboard input and writes it to display</li>
+</ol>
+<h2 id="http-server">Http server</h2>
+<ol>
+<li>Write a network driver (in ocaml) and its <code>soil</code> interface</li>
+<li>Write a http/af backend using <code>soil</code></li>
+<li>Host a hello world blog post using <code>terrarium</code></li>
+</ol>
+<h1 id="todo-tomorrow">Todo tomorrow</h1>
+<ul>
+<li>Dig into MirageOS</li>
+<li>Re-listen to the Hubris Oxide &amp; Friends podcast episode</li>
+<li>Poke around <code>chocolate-milk</code></li>
+<li>Read <a href="https://www.sigarch.org/leave-your-os-at-home-the-rise-of-library-operating-systems/">https://www.sigarch.org/leave-your-os-at-home-the-rise-of-library-operating-systems/</a> and <a href="https://events19.linuxfoundation.org/wp-content/uploads/2017/12/Library-OS-is-the-New-Container-Why-is-Library-OS-A-Better-Option-for-Compatibility-and-Sandboxing-Chia-Che-Tsai-UC-Berkeley.pdf">https://events19.linuxfoundation.org/wp-content/uploads/2017/12/Library-OS-is-the-New-Container-Why-is-Library-OS-A-Better-Option-for-Compatibility-and-Sandboxing-Chia-Che-Tsai-UC-Berkeley.pdf</a></li>
+<li>Poke around <a href="https://github.com/gramineproject/gramine">https://github.com/gramineproject/gramine</a></li>
+</ul>
+<h1 id="things-to-think-about">Things to think about</h1>
+<ul>
+<li>Other library operating systems</li>
+<li>Do I want to write this in rust instead?</li>
+<li>Do I need to write any compiler components? Can I get around that entirely?</li>
+</ul>
+
+
+    </div>
+</body>
+
+</html>

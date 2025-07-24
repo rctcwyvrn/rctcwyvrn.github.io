@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>lily's blog</title>
+    <link rel="stylesheet" type="text/css" href="/assets/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/syntax.css">
+    <link rel="icon" href="/images/logo.gif" type="image/gif">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <a rel="me" href="https://hachyderm.io/@rctcwyvrn"></a>
+</head>
+
+<body>
+    <script src="/cat/oneko.js"></script>
+    <div id="header">
+        <div id="logo">
+            <a href="/">
+                <img src="/images/logo.gif" width="34" height="24" align="top">
+                lily's blog</a>
+        </div>
+        <div id="navigation">
+            <a href="/">Home</a>
+            <a href="https://github.com/rctcwyvrn">Github</a>
+            <a href="/info/about/">About</a>
+            <a href="/info/contact/">Contact</a>
+            <a href="/archive/">Archive</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1>
+How does Hakyll work?
+</h1>
+
+        
+<div class="info">
+    <p> Posted on 2019-07-11
+        
+        by [rctcwyvrn]
+        
+    </p>
+    <p>
+        
+    </p>
+</div>
+<p>How does Hakyll work? A quick rundown from someone completely new to both web design <em>and</em> haskell.</p>
+<p>After you create and build the project you have the following:</p>
+<ul>
+<li>site.hs</li>
+<li>a folder of templates</li>
+<li>a folder of css</li>
+<li>a folder of markdown posts</li>
+</ul>
+<p>Here's how hakyll generates each page of the website (I think, I'm still figuring it out)</p>
+<p>The index:</p>
+<ol>
+<li>Apply the proper templates to make index.html have the list of posts</li>
+<li>Take that index.html and make it $content$  (lmao I just noticed that it becomes inline LaTeX, $x+y=1$)</li>
+<li>Take the default.html and replace the instances of $content$ on the template with index.html</li>
+<li>Export that as index.html</li>
+</ol>
+<p>The posts and stuff:</p>
+<ol>
+<li>Take the post's markdown data</li>
+<li>Pull out the metadata, called the 'context'</li>
+<li>Apply whatever templates you want to it, using the metadata if you want</li>
+</ol>
+<p>Here's how I made the favorite section on the index:</p>
+<ol>
+<li>Add a favorite tag to the metadata of the post I want to favorite</li>
+<li>Make a new template called favorite-list</li>
+<li>Use the hakyll DSL syntax to make the template do the same thing as post-list but only if the favorite tag is present</li>
+<li>Add to index.html a partial that uses favorite-list</li>
+</ol>
+<p>Using pandocCompilerWith to make stuff like laTeX</p>
+<p>\[ \ln x = \int_{-\infty}^x \frac 1 y \, dy . \]</p>
+<p>I followed this: <a href="http://travis.athougies.net/posts/2013-08-13-using-math-on-your-hakyll-blog.html">http://travis.athougies.net/posts/2013-08-13-using-math-on-your-hakyll-blog.html</a>
+The idea is that you just need to set the proper extensions and options for pandoc's writing.</p>
+<p><strong>Note</strong>
+You need to make sure the math.jax script is https or else github pages (smartly) refuses to load it</p>
+<p>How to add a block of text to every post of a certain type:</p>
+<ol>
+<li>Generate the html file for the stuff you want to add, for me this was abit.html, which is an about paragraph</li>
+<li>Add a tag to the metadata for your post's markdown</li>
+<li>Edit the post.html template to check for the tag</li>
+<li>Make the template load that html file as a partial if the tag is present</li>
+</ol>
+<pre data-lang="haskell" style="background-color:#2b303b;color:#c0c5ce;" class="language-haskell "><code class="language-haskell" data-lang="haskell"><span style="color:#8fa1b3;">main </span><span style="color:#b48ead;">:: IO </span><span>()
+</span><span>main = hakyll $ </span><span style="color:#b48ead;">do
+</span><span>	    match &quot;</span><span style="color:#a3be8c;">images/*</span><span>&quot; $ </span><span style="color:#b48ead;">do
+</span><span>	        route   idRoute
+</span></code></pre>
+
+
+    </div>
+</body>
+
+</html>
