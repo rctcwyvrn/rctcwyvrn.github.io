@@ -1,6 +1,6 @@
 +++
 title = "2 - Poems from headmates"
-authors = ["rctcwyvrn"]
+authors = ["terra"]
 
 [extra]
 book_tag = "yes"
