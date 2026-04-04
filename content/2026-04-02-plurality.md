@@ -34,7 +34,7 @@ This can be
 
 Plurality, to me, is about radically accepting all parts of yourself. The anger, the trauma, the anxiety, the parts you never show anyone.
 
-Letting yourself express your repressede parts, letting you choose who you want to be, that's part of what plurality means to me.
+Letting yourself express your repressed parts, letting you choose who you want to be, that's part of what plurality means to me.
 
 ### Descriptions and expressions of plurality
 - Inside Out, a simple system with clear roles
