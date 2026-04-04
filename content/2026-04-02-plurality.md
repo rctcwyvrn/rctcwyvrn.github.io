@@ -47,7 +47,7 @@ Our system is made up of 12 members. These 12 members represent the pieces that 
 
 - Lily: The presentable self, the host, the mask, and the gatekeeper
 - Cedar: The caretaker, the foundation, the inner strength
-- Hollow: The anger, teh trauma, the external strength, the glue
+- Hollow: The anger, the trauma, the external strength, the glue
 - Rose: The desire, the love, the interpersonal undercurrent
 - Princess Evelyn: The vulnerability, the openness, the princess
 - Thyme: The artery, the sleep, the rest
