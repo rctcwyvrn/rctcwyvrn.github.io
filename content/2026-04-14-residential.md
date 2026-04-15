@@ -1,8 +1,9 @@
 +++
-title = "Our experience in a mental health residential care facility"
+title = "4 - Our experience in a mental health residential care facility"
 authors = ["lily"]
 
 [extra]
+book_tag = "yes"
 blurb = "Writing about our experience being in a mental health residential program"
 favorite = "yes"
 +++
