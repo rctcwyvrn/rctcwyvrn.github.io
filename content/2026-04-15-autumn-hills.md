@@ -66,6 +66,10 @@ Sound bath
 - If you haven't had a sound bath before, you just lie there and hear resonant noises from singing bowls
 - Everyone loved the sound baths
 
+Nutrition
+- Usually pretty informative and interesting
+- Gave some useful information that I'll be taking out of here
+
 ### Bottom line
 Good!
 
@@ -80,9 +84,13 @@ Some actively made our healing harder, though not to any significant amount, jus
 
 Some activities were run by BHTs, and those were almost universally not useful wastes of time. They were almost always unprepared, unprofessional, and unhelpful in processing. They would make us fill out worksheets, do the same gratitude exercises, or more often than not, do nothing at all.
 
+Most of the time the BHTs would "supervise" groups by simply sitting there and staring at their phones doing nothing. This must be the easiest job in the world...
+
 Time spent sitting with my peers chatting about our experiences was much more useful than these BHT run "groups"
 
 A full review of each BHT that I interacted with can be found [here](/autumn-hills/staff-review.txt)
+
+Note: None of the BHTs were able to consistently use the correct pronouns for the client who used neopronouns. Zir was constantly misgendered and it pissed us the hell off. None were explicitly transphobic but none were able to put in the basic effort of using the right goddamn pronouns.
 
 ### Bottom line
 Could certainly be improved with more training, more experienced staff, and stricter hiring. 
@@ -98,7 +106,7 @@ The case managers were overworked, stretched between three houses, and busy mana
 
 The discharge organizer was even more overworked, leading to everyone not knowing where they were going after discharge until unreasonably late. For a friend during my time here, he didn't know until THE DAY BEFORE HE LEFT. Granted this was also due to insurance being cruel and evil, but still that late of a turnaround was unacceptable.
 
-Information distribution by the case managers to the rest of the treatment team was consistently inaccurate or absent. I didn't know my exact discharge date and was told different things by different people (thursday or friday? who knows). My friend didn't know his discharge time until the moment they called him out to head out because someone was here to pick him up.
+Information distribution by the case managers to the rest of the treatment team was consistently inaccurate or absent. I didn't know my exact discharge date and was told different things over and over by different people (thursday or friday? who knows). My friend didn't know his discharge time until the moment they called him out to head out because someone was here to pick him up.
 
 ### Bottom line
 Case management can and should be better.
