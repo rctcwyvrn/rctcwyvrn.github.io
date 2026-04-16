@@ -86,6 +86,10 @@ Some activities were run by BHTs, and those were almost universally not useful w
 
 Most of the time the BHTs would "supervise" groups by simply sitting there and staring at their phones doing nothing. This must be the easiest job in the world...
 
+There were some night staff who consistently would wake up the other clients (I'm a very heavy sleeper) by not following some basic common sense (don't bang on the doors at 3am...). Basic instructions like "turn the lights off in the hallways" and "don't stomp around or bang on our doors while we're trying to get our rest" took _multiple_ days to get through. 
+
+This was, frankly, not acceptable.
+
 Time spent sitting with my peers chatting about our experiences was much more useful than these BHT run "groups"
 
 A full review of each BHT that I interacted with can be found [here](/autumn-hills/staff-review.txt)
