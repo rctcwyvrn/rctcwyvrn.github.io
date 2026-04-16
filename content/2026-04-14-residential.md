@@ -56,7 +56,7 @@ An typical schedule for my program was
 # A summary of my history
 I'll keep this brief.
 
-I have been depressed on and off for the last 9 years. Anxious my entire life. I struggle with trauma from my upbringing, autism, and the fact that growing up queer in our society is inherently traumatic, and all the maladaptive behaviors that I picked up as survival mechanisms during my teenage years and early 20s. I struggle with maladaptive substance use and love fantasies.
+I have been depressed on and off for the last 9 years. Anxious my entire life. I struggle with trauma from my upbringing, autism, the fact that growing up queer in our society is inherently traumatic, and all the maladaptive behaviors that I picked up as survival mechanisms during my teenage years and early 20s. I struggle with maladaptive substance use and love fantasies.
 
 Over the years I've been suicidal consistently at least once a year. The worst before this year being last year, when I was hospitalized for 10 days.
 
