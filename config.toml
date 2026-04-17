@@ -1,11 +1,13 @@
 # The URL the site will be built for
-base_url = "https://rctcwyvrn.github.io/"
+base_url = "https://blog.ririryn.com/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
+
+generate_feeds = true
 
 [extra]
 # Put all your custom variables here
