@@ -94,7 +94,7 @@ Time spent sitting with my peers chatting about our experiences was much more us
 
 A full review of each BHT that I interacted with can be found [here](/autumn-hills/staff-review.txt)
 
-Note: None of the BHTs were able to consistently use the correct pronouns for the client who used neopronouns. Zir was constantly misgendered and it pissed us the hell off. None were explicitly transphobic but none were able to put in the basic effort of using the right goddamn pronouns.
+Note: None of the BHTs were able to consistently use the correct pronouns for the client who used neopronouns. Ze was constantly misgendered and it pissed us the hell off. None were explicitly transphobic but none were able to put in the basic effort of using the right goddamn pronouns.
 
 ### Bottom line
 Could certainly be improved with more training, more experienced staff, and stricter hiring. 
