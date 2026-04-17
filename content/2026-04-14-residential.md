@@ -119,14 +119,14 @@ The fourth week was a bit of a wash, as my therapist was out on vacation and I w
 
 I didn't even cry!
 
-The hardest part of this week (and the residential program in general) is the *self-advocacy*. A lesson I learned quickly was that you have to stand up for yourself in a place like this. You have to know what you want and push the staff to get you what you need. Remember that your peers and your therapist are (hopefully) in your corner and ready to support you in the difficult moments of self-advocacy
+The hardest part of this week (and the residential program in general) is the **self-advocacy**. A lesson I learned quickly was that you have to stand up for yourself in a place like this. You have to know what you want and push the staff to get you what you need. Remember that your peers and your therapist are (hopefully) in your corner and ready to support you in the difficult moments of self-advocacy
 
 # Summary (again)
 So in summary, a residential is a little bubble. A bubble of healing where you are asked the simple question: _Are you willing to put in the work to feel better?_
 
 *Are you willing to work through ~4 hours of therapy a day? Are you willing to be vulnerable? Painfully vulnerable? To your therapist? To your peers? Are you willing to let go of the familiar pain and embrace uncomfortable healing? Are you ready to make changes in your life? Are you willing to accept that things can be better?*
 
-_Are you?_
+**Are you?**
 
 I was, and residential turned out to be what I had needed for me to truly turn the corner on my healing process. 
 

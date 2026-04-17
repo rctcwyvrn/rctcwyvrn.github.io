@@ -17,7 +17,7 @@ For me, plurality is
 - A way to lighten the load on yourself. To let others front and take the spotlight
 - Something that you can _choose_ to be
 - Whatever you want it to be
-- Very, very, *very* weird to experience
+- Very, very, **very** weird to experience
 
 For me, plurality is not
 - Prescriptive, a diagnosis, or restrictive in any way
