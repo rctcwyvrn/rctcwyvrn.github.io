@@ -117,7 +117,7 @@ We had a family session with my mom, got through difficult situations with staff
 # The fourth week
 The fourth week was a bit of a wash, as my therapist was out on vacation and I was planning my discharge. Most of my friends had discharged as well. Things got a bit messy, but we kept our head up and kept writing and kept trying to learn about ourselves whenever we could. By this point we were fully accustomed to the routine that had been established in the weeks prior, so this was by far the easiest week.
 
-I didn't even cry!
+~~I didn't even cry!~~ I cried a lot on the last two days.
 
 The hardest part of this week (and the residential program in general) is the **self-advocacy**. A lesson I learned quickly was that you have to stand up for yourself in a place like this. You have to know what you want and push the staff to get you what you need. Remember that your peers and your therapist are (hopefully) in your corner and ready to support you in the difficult moments of self-advocacy
 
