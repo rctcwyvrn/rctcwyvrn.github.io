@@ -15,7 +15,7 @@ Ability to support: How able were they to support us in our mental health journe
 ------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
  Rae        |        5/5        |     5/5    |    yes   | Nice, helpful, responsible supervisor. Very good
  -----------|-------------------|------------|----------------------------------------------------------------------------------------------------------
- Jason      |        5/5        |     4/5    |    yes   | Awkward guy but he meant well and was clearly always trying his best. He did good
+ Jason      |        5/5        |     5/5    |    yes   | Awkward guy but he meant well and was clearly always trying his best. He did good
  -----------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
  Prince     |        5/5        |     4/5    |    yes   | Set firm rules, was helpful, was nice to the non-troublemakers
  -----------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
@@ -31,6 +31,10 @@ Ability to support: How able were they to support us in our mental health journe
  Stanley    |        2/5        |     3/5    |    no    | Bad impression
 ------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
  Tylik      |        5/5        |     4/5    |    yes   | Overall okay impression, he tries his best and does okay 
+------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
+ Margerita  |        5/5        |     5/5    |    yes   | Very supportive and kind. Helped us through some hard times. Always worked hard and advocated for us
+------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
+ Jake      |        5/5         |     5/5    |    yes   | Overall good impression, nice guy and seemed cool and knowledgeable
 ------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
  Allan      |        4/5        |     5/5    |   kinda  | Overall pretty good impression, very nice and helpful 
 ------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
