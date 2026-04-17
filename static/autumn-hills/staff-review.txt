@@ -43,10 +43,12 @@ Ability to support: How able were they to support us in our mental health journe
 ------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
  Gabriela   |        0/5        |     4/5    |    no    | Horrible impression. Enabled the problematic client in our cohort. Did nothing productive for us
 ------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
- Grace      |        5/5        |     5/5    |   yes    | Great impression, professional and kind
+ Grace      |        5/5        |     5/5    |    yes   | Great impression, professional and kind
 ------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
  Aaron      |        5/5        |     5/5    |    yes   | Kinda intimidating at first, but a genuinely nice guy who cared for our wellbeing. Good impression
 ------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
  Anthony    |        3/5        |     5/5    |    no    | Nice guy but didn't really do much in terms of helping us. Also wasn't the most professional either
 ------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
  Eros       |        5/5        |     5/5    |    yes   | Seemed to genuinely care about us, was a nice guy, and went to bat for us. Good impression
+------------|-------------------|------------|-----------------------------------------------------------------------------------------------------------
+ Brandon    |        5/5        |     5/5    |    yes   | Nice and genuinely tried. Pretty good impression.
