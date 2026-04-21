@@ -3,6 +3,7 @@ title = "Alien blood"
 authors = ["lily"]
 
 [extra]
+favorite = "yes"
 book_tag = "yes"
 blurb = "Writing about bleeding alien blood, a comic by flyingfrappe"
 +++
