@@ -1,5 +1,5 @@
 +++
-title = "5 - Our experience at Autumn Hills Behavioral Health (Victory Bay Residential)"
+title = "Our experience at Autumn Hills Behavioral Health (Victory Bay Residential)"
 authors = ["lily"]
 
 [extra]

@@ -1,5 +1,5 @@
 +++
-title = "4 - Our experience in a mental health residential care facility"
+title = "Our experience in a mental health residential care facility"
 authors = ["lily"]
 
 [extra]

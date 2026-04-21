@@ -1,5 +1,5 @@
 +++
-title = "1 - Plurality for me (Lily)"
+title = "Plurality for me (Lily)"
 authors = ["lily"]
 
 [extra]

@@ -1,5 +1,5 @@
 +++
-title = "10 - Anxious love"
+title = "Anxious love"
 authors = ["lily"]
 
 [extra]

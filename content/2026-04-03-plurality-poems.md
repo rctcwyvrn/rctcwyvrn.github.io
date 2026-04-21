@@ -1,5 +1,5 @@
 +++
-title = "2 - Poems from headmates"
+title = "Poems from headmates"
 authors = ["terra"]
 
 [extra]

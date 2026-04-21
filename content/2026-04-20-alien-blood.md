@@ -1,5 +1,5 @@
 +++
-title = "12 - Alien blood"
+title = "Alien blood"
 authors = ["lily"]
 
 [extra]
