@@ -26,5 +26,9 @@
     </p>
 </div>
 {{ page.content | safe }}
+
+{% if page.extra.hide_subscribe %} 
+{% else %}
 <a href="https://feedrabbit.com/subscriptions/new?url=http%3A%2F%2Fblog.ririryn.com"><em>Liked this post? Subscribe to get emailed about new posts!</em></a>
+{% endif %}
 {% endblock content %}

@@ -1,6 +1,8 @@
----
-title: About
----
++++
+title = "About"
+[extra]
+hide_subscribe = "yes"
++++
 
 Just a girl trying her best.
 
