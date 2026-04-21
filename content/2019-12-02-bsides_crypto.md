@@ -3,7 +3,6 @@ title = " BSides Ottawa crypto challenges writeup"
 authors = ["rctcwyvrn"]
 
 [extra]
-favorite = "yes"
 ctf_tag = "yes"
 blurb = "Writeups for some more crypto challenges, featuring a very classic symmetric crypto attack, the slide attack"
 +++

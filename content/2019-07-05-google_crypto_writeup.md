@@ -3,7 +3,6 @@ title = "Google CTF 2019 Crypto challenges writeup"
 authors = ["rctcwyvrn"]
 
 [extra]
-favorite = "yes"
 ctf_tag = "yes"
 blurb = "Writeups for the three crypto challenges in google-ctf-2019"
 +++

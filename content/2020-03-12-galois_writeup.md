@@ -3,7 +3,6 @@ title = "UTCTF Galois. Remember kids, never repeat a nonce!"
 authors = ["rctcwyvrn"]
 
 [extra]
-favorite = "yes"
 ctf_tag = "yes"
 blurb = "A writeup for a nonce reptition attack on GCM mode"
 +++
