@@ -1,5 +1,5 @@
 +++
-title = "Compared, to others, by others, by myself"
+title = "Compared: To others, by others, by myself"
 authors = ["lily"]
 
 [extra]
@@ -90,7 +90,7 @@ _Do you know what it feels like to be on the other side of that conversation???_
 # Compared by myself to myself
 The hardest form of comparison that I struggle with is comparison to myself.
 
-**A Lily & Nettle conversation happened while writing this blog post, so that's what follows -Cedar**
+**A Lily & Nettle conversation happened while writing this blog post, so that's what follows. Nettle is the inner critic headmate in our system. -Cedar**
 
 _You used to be able to do this_
 
