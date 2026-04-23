@@ -93,10 +93,10 @@ A mystery I've yet to solve
 A question left unanswered
 
 Joy is fleeting
-Like a rabbitin the snow
+Like a rabbit in the snow
 It darts out of my grasp
 
-Joy is warm sunshin
+Joy is warm sunshine
 Rays on my skin
 Ever so warm
 
