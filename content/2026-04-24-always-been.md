@@ -7,6 +7,8 @@ book_tag = "yes"
 blurb = "Trans experiences and childhood"
 +++
 
+_This is the 1st post in a series about trans experiences ([next](/trauma-cuddles))_
+
 _I have always been a trans woman_
 
 I didn't grow up as a boy, as a man, or whatever society likes to label trans women as.
