@@ -48,7 +48,7 @@ Can you understand how painful that is?
 
 _A deeply painful time of my life, loaded with confusion and pain._
 
-**I have always been a trans woman. Even when I was a child and didn't know what those feelings went**.
+**I have always been a trans woman. Even when I was a child and didn't know what those feelings meant**.
 
 These experiences are, unfortunately, a core part of the trans experience.
 
@@ -67,7 +67,7 @@ The closet is not an idle place that one sits within while waiting to grow out o
 
 It's a deeply painful place that is incredibly hard to escape.
 
-Every part of you is telling you that you should stay in that miserbale place, hiding who you are for the sake of others or your own safety.
+Every part of you is telling you that you should stay in that miserable place, hiding who you are for the sake of others or your own safety.
 
 But eventually something in you breaks and you snap and you decide to **fuck** all those who stand against you.
 
