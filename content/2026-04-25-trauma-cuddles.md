@@ -13,7 +13,7 @@ Transfeminine trauma is extremely difficult, yet every trans woman I've talked t
 
 Never the same, but often the same themes and, relevantly for this post, same desires for relief.
 
-We often want similar things for escapes, we have similar fantasies, we have similar ways we wished we could just be _free_ from it.
+We often want similar things for escapes, we have similar fantasies, we wish we could just be _free_ from it.
 
 # A case study: A tweet
 
@@ -72,6 +72,11 @@ Someone who can heal our wounds.
 
 _So many HDG stories are about traumatized trans women healing from their wounds._
 
+About girls getting the _warmth_ and _safety_ that we so deeply desire in our daily lives.
+
+### An excerpt from Five lives by PyxxieStyxx
+<img src="/images/warmth-and-safety.png" alt="An ao3 screenshot" width="400"/>
+
 Hurt people read wish fufillment from other hurt people, and decide to write their own wish fufillment.
 
 I did this too, sketching out my own HDG stories that matched my own experiences, yearnings, kinks, and the kind of _healing_ that I wanted to experience as someone who's been uniquely hurt.
@@ -129,5 +134,9 @@ We just want to heal.
 We just want to heal.
 
 If you have the chance to love a trans woman, please love her deeply and let her heal.
+
+Build us a space where we can heal.
+
+<img src="/images/meh.png" alt="A signal message" width="400"/>
 
 Let us _heal._
