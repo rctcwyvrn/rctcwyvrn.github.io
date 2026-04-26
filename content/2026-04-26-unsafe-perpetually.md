@@ -1,0 +1,114 @@
++++
+title = "Unsafe, perpetually (Trans: 3 | Trauma: 1)"
+authors = ["lily"]
+
+[extra]
+book_tag = "yes"
+blurb = "My experience of trauma and how I carry it in my body"
++++
+
+_This is the 3rd post in a series about trans experiences ([previous](/trauma-cuddles)) and the 1st in a series about my trauma_
+
+## This is a heavy post. There are no answers, no happy ending. 
+
+_Proceed mindfully_
+
+Much of my issues have been processed and I can write about them in an uplifting way, write about how _things will be okay_.
+
+My trauma is not one of those issues. This post does not have a happy ending.
+
+But hopefully this series will have one.
+
+_I can only hope._
+
+# Safety, the lack of it
+
+I never feel safe in my own body.
+
+I never feel safe in my own mind.
+
+I'm always tense.
+
+Always on edge.
+
+Always waiting for something to go wrong.
+
+For me to start feeling depressed.
+
+For me to be struck with anxiety.
+
+For me to be struck.
+
+I'm always tense.
+
+Always waiting for something to go wrong.
+
+<img src="/images/meh.png" alt="A signal message" width="400"/>
+
+# Reasons
+
+Why do I feel like this?
+
+## OCD
+
+Is it [my OCD](/ocd) that makes me feel like this? Unsafe in my own mind?
+
+Unsafe wherever I am?
+
+Is it because it fills my mind with every possible way that something could go wrong?
+
+Is it because it's afraid of dying so much that it makes me want to die?
+
+Is it because of the OCD?
+
+## Neurochemistry
+
+Am I just genetically predisposed to feeling like this?
+
+Feeling perpetually unsafe?
+
+Perpetually unable to just rest?
+
+Perpetually analyzing, perpetually on edge, perpetually tense?
+
+Perpetually waiting for something to go wrong?
+
+Is that just my life?
+
+## Trauma
+
+Is it because of what I've experienced in the past?
+
+Is it from growing up trans?
+
+Was I not always this way? Was I made to feel this way by others?
+
+This feeling of never feeling safe.
+
+Is this what it means for the body to keep the score?
+
+_I don't know._
+
+_I just know one thing._
+
+# I want
+
+I want to feel safe...
+
+I want to be okay...
+
+I want to just be able to exist without being afraid...
+
+I want [an escape](/trauma-cuddles) from this...
+
+I want to stop hurting...
+
+My hurt just goes on and on and on and on and I wish I could be free.
+
+Someone please set me free from this.
+
+I don't want to hold onto this anymore.
+
+Please.
+
+Someone save me...

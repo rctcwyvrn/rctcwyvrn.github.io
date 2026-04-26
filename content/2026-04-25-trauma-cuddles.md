@@ -7,7 +7,7 @@ book_tag = "yes"
 blurb = "Trans experiences of trauma and how we heal"
 +++
 
-_This is the 2nd post in a series about trans experiences ([previous](/always-been))_
+_This is the 2nd post in a series about trans experiences ([previous](/always-been)/[next](/unsafe-perpetually))_
 
 Transfeminine trauma is extremely difficult, yet every trans woman I've talked to holds onto some amount of it. 
 
