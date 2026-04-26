@@ -121,7 +121,7 @@ fall
 . . .
 
 # In conclusion
-Hurt trans women are _everywhere_, you don't even need to try to find one when at spaces with lots of trans women.
+Hurt trans women are _everywhere_, you don't even need to try to find one in spaces with lots of trans women.
 
 It's quite telling that what we always yearning is just **healing**. 
 
