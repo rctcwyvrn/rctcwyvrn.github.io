@@ -45,6 +45,32 @@ Always waiting for something to go wrong.
 
 <img src="/images/meh.png" alt="A signal message" width="400"/>
 
+## Unsafe - Lily
+```
+Something flickers at the edge of my vision
+And I'm struck with a wave of anxiety
+Is it a person?
+Is it a threat?
+Is it something that's going to hurt me?
+
+My face snaps to the side 
+Prepared to face whatever awaits me
+Alert, afraid, anxious
+
+It was just a lock of my hair in the wind
+
+I return to reality
+Just a little bit shaken
+Just a little bit more tired
+I am
+So 
+Tired
+So tired of this all
+So tired of this torturous life I have to live
+```
+
+I am so tired.
+
 # Reasons
 
 Why do I feel like this?
