@@ -63,7 +63,7 @@ I am autistic.
 
 Autism is a difficult condition that makes existing _very difficult_.
 
-Autism makes life a guessing game of how to not be hurt. How to not be hurt by other people, whether that's directly by being taken advantage of or bullied, or indirectly by being rejected for who you are as a person. How to not get [hurt by your environment](/alien-blood), by the sounds, the smells, the bright lights of the world.
+Autism makes life a guessing game of [how to not be hurt](/alien-blood). How to not be hurt by other people, whether that's directly by being taken advantage of or bullied, or indirectly by being rejected for who you are as a person. How to not get hurt by your environment, by the sounds, the smells, the bright lights of the world.
 
 Autism is extremely difficult to work through.
 
