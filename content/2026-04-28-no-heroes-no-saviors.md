@@ -271,8 +271,8 @@ _I have to save myself._
 
 _I **WILL** save myself_.
 
-Stay safe out there.
-
 . . .
 
 **This concludes Arc 1 of _Finding the Words_**
+
+Stay safe out there.
