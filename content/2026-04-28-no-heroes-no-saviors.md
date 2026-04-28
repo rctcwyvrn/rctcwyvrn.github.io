@@ -182,7 +182,7 @@ Finding someone who understands those 4 conditions is already impossible enough,
 
 I've given up on finding that person.
 
-On finding someone who can give me CBT, DBT, IFS, ACT, EMDR. Competently in the 5 or 6 domains that I need, that are extremely difficult to work through on their own.
+On finding someone who can give me CBT, DBT, IFS, ACT, EMDR, ERP. Someone who can competently practicef in the 6 domains that I need, on 4 disorders that are extremely difficult to work through on their own.
 
 I've given on that.
 
@@ -273,6 +273,6 @@ _I **WILL** save myself_.
 
 . . .
 
-**This concludes Arc 1 of _Finding the Words_**
+**This concludes Act 1 of _Finding the Words_**
 
 Stay safe out there.
