@@ -7,7 +7,7 @@ book_tag = "yes"
 blurb = "My experience of trauma and how I carry it in my body"
 +++
 
-_This is the 3rd post in a series about trans experiences ([previous](/trauma-cuddles)) and the 1st in a series about my trauma_
+_This is the 3rd post in a series about trans experiences ([previous](/trauma-cuddles)/[next](/misgendering)) and the 1st in a series about my trauma_
 
 ## This is a heavy post. There are no answers, no happy ending. 
 
@@ -229,4 +229,4 @@ Or else I'll completely lose hope.
 
 And lose everything.
 
-_I have to keep going_
+_I have to keep going._
