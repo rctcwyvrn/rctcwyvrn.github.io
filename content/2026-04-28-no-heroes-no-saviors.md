@@ -168,7 +168,7 @@ Therapists can only do so much.
 
 A therapist who specializes in OCD will know nothing about trans trauma.
 
-A queer therapist who specializes in queer trauma will have no idea how to deal wtih bipolar disorder.
+A queer therapist who specializes in queer trauma will have no idea how to deal with bipolar disorder.
 
 A bipolar specialist will have no idea how to deal with autism stressors.
 
