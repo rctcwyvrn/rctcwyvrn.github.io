@@ -47,7 +47,7 @@ OCD makes your mind a hostile place to life in, attacks everything that you stan
 
 OCD is extremely difficult to work through.
 
-, , , 
+. . . 
 
 I have bipolar disorder type 2.
 
@@ -57,7 +57,7 @@ Bipolar makes life a roller coaster between blazing highs where I burn myself to
 
 Bipolar disorder is extremely difficult to work through.
 
-, , , 
+. . . 
 
 I am autistic.
 
@@ -182,7 +182,7 @@ Finding someone who understands those 4 conditions is already impossible enough,
 
 I've given up on finding that person.
 
-On finding someone who can give me CBT, DBT, IFS, ACT, EMDR. Competently in the 5 or 6 domains that are extremely difficult to work through on their own.
+On finding someone who can give me CBT, DBT, IFS, ACT, EMDR. Competently in the 5 or 6 domains that I need, that are extremely difficult to work through on their own.
 
 I've given on that.
 
