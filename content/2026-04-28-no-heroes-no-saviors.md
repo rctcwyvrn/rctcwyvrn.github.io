@@ -49,7 +49,7 @@ OCD is extremely difficult to work through.
 
 . . . 
 
-I have bipolar disorder type 2.
+[I have bipolar disorder type 2.](/hypomania)
 
 Bipolar disorder is a difficult condition that makes existing _very difficult_.
 
