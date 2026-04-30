@@ -41,7 +41,7 @@ _I have to save myself_.
 ## I have
 [I have OCD](/ocd).
 
-Obsessive Compulsive disorder  is a difficult condition that makes existing _very difficult_.
+Obsessive Compulsive Disorder  is a difficult condition that makes existing _very difficult_.
 
 OCD makes your mind a hostile place to life in, attacks everything that you stand for, and makes your life so miserable that you spend it compulsively trying to make the pain go away.
 
@@ -49,9 +49,9 @@ OCD is extremely difficult to work through.
 
 . . . 
 
-[I have bipolar disorder type 2.](/hypomania)
+[I have Bipolar Disorder type 2.](/hypomania)
 
-Bipolar disorder is a difficult condition that makes existing _very difficult_.
+Bipolar Disorder is a difficult condition that makes existing _very difficult_.
 
 Bipolar makes life a roller coaster between blazing highs where I burn myself to a crisp, and crippling lows where I believe that there's no hope for me.
 
@@ -71,7 +71,7 @@ Autism is extremely difficult to work through.
 
 I have cPTSD.
 
-Complex Post Traumatic Stress disorder is a difficult condition that makes existing _very difficult_.
+Complex Post Traumatic Stress Disorder is a difficult condition that makes existing _very difficult_.
 
 cPTSD makes your body feel [perpetually unsafe](/unsafe-perpetually) in a way that makes every moment feel like it might be your last. A constant state of nervous system activation that is so exhausting to experience.
 
@@ -182,7 +182,7 @@ Finding someone who understands those 4 conditions is already impossible enough,
 
 I've given up on finding that person.
 
-On finding someone who can give me CBT, DBT, IFS, ACT, EMDR, ERP. Someone who can competently practicef in the 6 domains that I need, on 4 disorders that are extremely difficult to work through on their own.
+On finding someone who can give me CBT, DBT, IFS, ACT, EMDR, ERP. Someone who can competently practice in the 6 domains that I need, on 4 disorders that are extremely difficult to work through on their own.
 
 I've given on that.
 
