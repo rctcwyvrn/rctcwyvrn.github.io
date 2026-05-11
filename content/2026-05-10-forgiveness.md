@@ -73,7 +73,7 @@ _i'm still scared. scared of her hurting us again. scared of what her future mis
 
 You aren't alone anymore, Knight. You're not a lonely child without support anymore. You're that frozen part of us in the past, yes, but now you're a member of a system full of competent adults who can keep us safe.
 
-We have supports: a therapist, a girlfriend, friends, other family members, and most importantly [we have ourselves](/no-heroes-ho-saviors)
+We have supports: a therapist, a girlfriend, friends, other family members, and most importantly [we have ourselves](/no-heroes-no-saviors)
 
 We will be okay.
 
