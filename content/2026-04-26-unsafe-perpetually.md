@@ -3,6 +3,7 @@ title = "Unsafe, perpetually (Trans: 3 | Trauma: 1)"
 authors = ["lily"]
 
 [extra]
+favorite = "yes"
 book_tag = "yes"
 blurb = "My experience of trauma and how I carry it in my body"
 +++

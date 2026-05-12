@@ -3,6 +3,7 @@ title = "Forgiveness"
 authors = ["terra"]
 
 [extra]
+favorite = "yes"
 book_tag = "yes"
 blurb = "Pondering forgiving someone who's wronged us in the past"
 +++

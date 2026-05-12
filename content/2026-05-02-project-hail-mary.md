@@ -7,6 +7,8 @@ book_tag = "yes"
 blurb = "Writing about how watching Project Hail Mary gives us hope and will to keep going"
 +++
 
+_This is the 1st post in a series about the book/movie Project Hail Mary ([next](/bravery))_
+
 Have you seen [Project Hail Mary](https://en.wikipedia.org/wiki/Project_Hail_Mary_(film)) yet?
 
 If not, and it's still in theatres, go watch it! Like literally right now, or today, or this weekend.

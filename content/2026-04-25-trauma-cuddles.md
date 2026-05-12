@@ -3,6 +3,7 @@ title = "Trauma cuddles (Trans: 2)"
 authors = ["lily"]
 
 [extra]
+favorite = "yes"
 book_tag = "yes"
 blurb = "Trans experiences of trauma and how we heal"
 +++
