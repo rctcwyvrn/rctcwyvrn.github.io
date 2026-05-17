@@ -7,7 +7,7 @@ book_tag = "yes"
 blurb = "Writing about what it feels like to be misgendered"
 +++
 
-_This is the 4th post in a series about trans experiences ([previous](/unsafe-perpetually))_
+_This is the 4th post in a series about trans experiences ([previous](/unsafe-perpetually)/[next](/mirrored))_
 
 ## Misgendering - Lily
 
