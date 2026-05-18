@@ -1,4 +1,5 @@
 {% extends "default.html" %}
+{% import "macros.html" as macros %}
 
 {% block head %}
 {% if page.extra.blurb %}
@@ -25,7 +26,7 @@
         {% endif %}
     </p>
 </div>
-{{ page.content | safe }}
+{{ page.content | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe }}
 
 {% if page.extra.hide_subscribe %} 
 {% else %}
