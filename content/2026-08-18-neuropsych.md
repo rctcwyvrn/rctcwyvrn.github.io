@@ -5,6 +5,7 @@ authors = ["terra"]
 [extra]
 book_tag = "yes"
 blurb = "Funny bits from my neuropsych evaluation"
+favorite = "yes"
 +++
 
 ## Big tism
