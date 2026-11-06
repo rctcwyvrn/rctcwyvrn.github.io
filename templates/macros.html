@@ -1,4 +1,4 @@
-{% macro toc(page) %}
+{% component toc(page) %}
   <ul>
   {% for h1 in page.toc %}
       <li>
@@ -15,4 +15,4 @@
       </li>
   {% endfor %}
   </ul>
-{% endmacro toc %}
+{% endcomponent toc %}
