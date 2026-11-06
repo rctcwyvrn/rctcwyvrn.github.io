@@ -25,7 +25,8 @@
         {% endif %}
     </p>
 </div>
-{{ page.content | safe }}
+{% set toc_html = <toc page={page}/> %}
+{{ page.content | replace(from="<!-- toc -->", to=toc_html | str) | safe }}
 
 {% if page.extra.hide_subscribe %} 
 {% else %}
